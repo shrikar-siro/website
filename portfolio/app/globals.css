@@ -122,9 +122,8 @@
 }
 
 .custom-gradient{
-  height: 100vh;
   width: 100%;
-  background: linear-gradient(45deg, rgb(188, 179, 179), rgb(192, 192, 255), rgb(104, 104, 218), rgb(239, 133, 219));
+  background: linear-gradient(45deg, rgb(188, 179, 179), rgb(192, 192, 255), rgb(128, 128, 225), rgb(239, 133, 219));
   background-size: 300% 300%;
   animation: color 12s ease-in-out infinite;
 }
@@ -141,6 +140,19 @@
   100%{
     background-position: 0 50%;
   }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fade-in 0.8s ease-out forwards;
 }
 
 .text-container{
@@ -166,4 +178,11 @@
   from{
     width: 0;
   }
+}
+
+.diagonal-lines{
+  background-image:
+    repeating-linear-gradient(45deg, #d0d0d0 0px, #d0d0d0 1px, transparent 1px, transparent 20px),
+    repeating-linear-gradient(-45deg, #d0d0d0 0px, #d0d0d0 1px, transparent 1px, transparent 20px);
+  background-color: #f8f8f8; /* fallback background */
 }

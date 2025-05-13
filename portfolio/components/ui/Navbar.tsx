@@ -16,8 +16,8 @@ export default function Navbar(){
     }
     return(
         // desktop navigation.
-        <header className = "bg-transparent text-black">
-            <nav className = "flex justify-between items-center w-[85%] mx-auto">
+        <header className = "text-white w-full">
+            <nav className = "flex justify-between items-center max-w-5xl mx-auto">
                 <div className = "flex items-center gap-[1vw]">
                     {/* <img className = "h-[60px] w-[60px] rounded-full p-1" id = "profileImage" 
                     src ="profile.jpeg" alt = "..."></img> */}
@@ -26,11 +26,11 @@ export default function Navbar(){
                 {/**have one div element for the list containing links. */}
                 <div className = "">
                     <ul className = "hidden md:flex items-center gap-[1vw]">
-                        <li><a className = "px-4 py-2 rounded-full hover:bg-gray-200" href = "#">About</a></li>
-                        <li><a className = "px-4 py-2 rounded-full hover:bg-gray-200" href = "#">Experience</a></li>
-                        <li><a className = "px-4 py-2 rounded-full hover:bg-gray-200" href = "#">Projects</a></li>
-                        <li><a className = "px-4 py-2 rounded-full hover:bg-gray-200" href = "#">Skills</a></li>
-                        <li><a className = "px-4 py-2 rounded-full hover:bg-gray-200" href = "#">Contact</a></li>
+                        <li><a className = "px-4 py-2 rounded-full hover:bg-gray-200" href = "#about">About</a></li>
+                        <li><a className = "px-4 py-2 rounded-full hover:bg-gray-200" href = "#experience">Experience</a></li>
+                        <li><a className = "px-4 py-2 rounded-full hover:bg-gray-200" href = "#projects">Projects</a></li>
+                        <li><a className = "px-4 py-2 rounded-full hover:bg-gray-200" href = "#skills">Skills</a></li>
+                        <li><a className = "px-4 py-2 rounded-full hover:bg-gray-200" href = "#contact">Contact</a></li>
                     </ul>
                 </div>
             </nav>
@@ -39,7 +39,7 @@ export default function Navbar(){
             <div className = "md:hidden">
                 <Sheet>
                     <SheetTrigger>
-                        <Menu className = "p-0 text-black w-7 h-7" />
+                        <Menu className = "p-0 text-white w-7 h-7" />
                     </SheetTrigger>
                     <SheetContent side="right" className = "w-64">
                         <SheetHeader>
