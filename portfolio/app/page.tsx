@@ -45,7 +45,7 @@ export default function Home() {
           Experience
         </div>
         <div className = "flex flex-col mt-10 p-5">
-          <Card className = " w-full mx-auto max-w-5xl mb-5 bg-transparent border border-gray-300">
+          <Card className = " w-full mx-auto max-w-5xl mb-5 bg-transparent border border-gray-300 transform transition hover:-translate-y-1 duration-300">
             <CardHeader>
               <CardTitle>
                 <div className = "flex flex-row gap-1 items-center">
@@ -61,7 +61,7 @@ export default function Home() {
                 </ul>
             </CardContent>
           </Card>
-          <Card className = " w-full mx-auto max-w-5xl mb-5 bg-transparent border border-gray-300">
+          <Card className = " w-full mx-auto max-w-5xl mb-5 bg-transparent border border-gray-300 transform transition hover:-translate-y-1 duration-300">
             <CardHeader>
               <CardTitle>
                 <div className = "flex flex-row gap-1 items-center">
@@ -79,7 +79,7 @@ export default function Home() {
                 </ul>
             </CardContent>
           </Card>
-          <Card className = "w-full mx-auto max-w-5xl mb-5 bg-transparent border border-gray-300">
+          <Card className = "w-full mx-auto max-w-5xl mb-5 bg-transparent border border-gray-300 transform transition hover:-translate-y-1 duration-300">
             <CardHeader>
               <CardTitle>
                 <div className = "flex flex-row gap-1 items-center">

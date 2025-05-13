@@ -9,6 +9,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import { Button } from "@/components/ui/button"
+
 
 export default function Navbar(){
     const navLinks = {
@@ -17,7 +19,7 @@ export default function Navbar(){
     return(
         // desktop navigation.
         <header className = "text-white w-full">
-            <nav className = "flex justify-between items-center max-w-5xl mx-auto">
+            <nav className = "sticky top-0 z-50 bg-transparent flex justify-between items-center max-w-5xl mx-auto">
                 <div className = "flex items-center gap-[1vw]">
                     {/* <img className = "h-[60px] w-[60px] rounded-full p-1" id = "profileImage" 
                     src ="profile.jpeg" alt = "..."></img> */}
@@ -25,12 +27,32 @@ export default function Navbar(){
                 </div>
                 {/**have one div element for the list containing links. */}
                 <div className = "">
-                    <ul className = "hidden md:flex items-center gap-[1vw]">
-                        <li><a className = "px-4 py-2 rounded-full hover:bg-gray-200" href = "#about">About</a></li>
-                        <li><a className = "px-4 py-2 rounded-full hover:bg-gray-200" href = "#experience">Experience</a></li>
-                        <li><a className = "px-4 py-2 rounded-full hover:bg-gray-200" href = "#projects">Projects</a></li>
-                        <li><a className = "px-4 py-2 rounded-full hover:bg-gray-200" href = "#skills">Skills</a></li>
-                        <li><a className = "px-4 py-2 rounded-full hover:bg-gray-200" href = "#contact">Contact</a></li>
+                    <ul className = "hidden md:flex items-center gap-[1vw] font-normal">
+                        <li>
+                            <Button variant="ghost">
+                                <a href = "#about">About</a>
+                            </Button>
+                        </li>
+                        <li>
+                            <Button variant="ghost">
+                                <a href = "#experience">Experience</a>
+                            </Button>
+                        </li>
+                        <li>
+                            <Button variant="ghost">
+                                <a href = "#projects">Projects</a>
+                            </Button>
+                        </li>
+                        <li>
+                            <Button variant="ghost">
+                                <a href = "#skills">Skills</a>
+                            </Button>
+                        </li>
+                        <li>
+                            <Button variant="ghost">
+                                <a href = "#contact">Contact</a>
+                            </Button>
+                        </li>
                     </ul>
                 </div>
             </nav>
