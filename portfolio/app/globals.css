@@ -169,14 +169,16 @@
 .text-container{
   display: inline-block;
 }
+
 .text-to-animate{
   border-right: 5px solid;
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
   animation:
-      typing 2s steps(16),
+      typing 1s steps(16),
       cursor .4s step-end infinite alternate;
+  border-right: none;
 }
 
 /*blinking cursor animation*/
@@ -196,4 +198,9 @@
     repeating-linear-gradient(45deg, #d0d0d0 0px, #d0d0d0 1px, transparent 1px, transparent 20px),
     repeating-linear-gradient(-45deg, #d0d0d0 0px, #d0d0d0 1px, transparent 1px, transparent 20px);
   background-color: #f8f8f8; /* fallback background */
+}
+
+
+.experiences.in-view {
+  animation: fade-in 2s ease;
 }
