@@ -45,7 +45,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className = "py-50 place-content-center">
+      <section id="about" className = "py-35 place-content-center scroll-mt-20">
         {/** have a big div as the container div, and 2 children divs. */}
         <div className = "lg:flex lg:gap-20 items-start p-5 md:p-10 sm:p-15 mx-auto">
           <div className = "flex flex-shrink-0 justify-center">
@@ -60,7 +60,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="experience" className = "place-content-center font-bold mb-40">
+      <section id="experience" className = "place-content-center font-bold mb-40 scroll-mt-20">
         <div className = "text-4xl text-center">
           Experience
         </div>
@@ -118,11 +118,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section id = "projects" className = "py-50 grid place-items-center p-5 sm:p-15 experiences animate">
+      <section id = "projects" className = "py-30 grid place-items-center p-5 sm:p-15 experiences animate scroll-mt-20">
         <div className = "flex flex-col lg:flex-row items-center justify-center lg:gap-30">
           <div className = "flex-grow">
             <p className = "text-4xl font-bold mb-4 fade-in text-center">Projects</p>
-             <p className = "fade-in">Here are some of my projects. Feel free to look around! For more information about
+             <p className = "fade-in text-center">Here are some of my projects. Feel free to look around! For more information about
               each project, click on the card to visit its GitHub Repo. 
              </p>
           </div>
@@ -137,9 +137,9 @@ export default function Home() {
                     <CarouselItem className = "md:basis-1/2 lg:basis-1/1">
                       <div className = "lg:h-[500px] md:h-[500px] border-2 border-gray-200 border-opacity-60 rounded-md overflow-hidden transform transition duration-150 hover:bg-gray-900 flex flex-col">
                         <img src = "laLigaInsights.png" className = "w-full h-[250px] object-cover object-center"></img>
-                        <div className = "p-6 hidden md:block flex-grow">
-                          <h1 className = "text-2xl font-semibold mb-3 text-center">LaLiga Insights</h1>
-                          <p className = "leading-relaxed mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ipsum similique, nisi, maiores ipsam 
+                        <div className = "lg:p-6 md:p-4 sm:p-4 hidden md:block flex-grow text-center">
+                          <h1 className = "text-lg font-semibold mb-3 text-center">LaLiga Insights</h1>
+                          <p className = "lg:text-md md:text-base mx-auto leading-relaxed mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ipsum similique, nisi, maiores ipsam 
                             natus reiciendis 
                             consequuntur alias est atque.</p>
                         </div>
@@ -148,9 +148,9 @@ export default function Home() {
                     <CarouselItem className = "md:basis-1/2 lg:basis-1/1">
                       <div className = "lg:h-[500px] md:h-[500px] border-2 border-gray-200 border-opacity-60 rounded-md overflow-hidden transform transition duration-150 hover:bg-gray-900">
                         <img src = "LungCancerClassifier.png" className = "w-full h-[250px] object-cover object-center"></img>
-                        <div className = "p-6 hidden md:block flex-grow">
-                          <h1 className = "text-2xl font-semibold mb-3 text-center">Lung Cancer Classifier</h1>
-                          <p className = "leading-relaxed mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ipsum similique, nisi, maiores ipsam 
+                        <div className = "lg:p-6 md:p-4 sm:p-4 hidden md:block flex-grow text-center">
+                          <h1 className = "text-lg font-semibold mb-3 text-center">Lung Cancer Classifier</h1>
+                          <p className = "lg:text-md md:text-base mx-auto leading-relaxed mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ipsum similique, nisi, maiores ipsam 
                             natus reiciendis 
                             consequuntur alias est atque iste sequi beatae fugiat 
                             reprehenderit quis quo repudiandae neque earum.</p>

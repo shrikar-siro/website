@@ -18,9 +18,9 @@ export default function Navbar(){
     }
     return(
         // desktop navigation.
-        <header className = "text-white w-full p-3">
-            <nav className = "sticky top-0 z-50 bg-transparent flex justify-between items-center mx-auto">
-                <div className = "flex items-center gap-auto">
+        <header className = "w-full sticky top-0 z-50 backdrop-blur-md bg-transparent p-3 border-b border-white/20">
+            <nav className = "bg-transparent flex justify-between items-center mx-auto">
+                <div className = "flex items-center">
                     <p className = "text-lg">Shrikar Siro</p>
                 </div>
                 {/**have one div element for the list containing links. */}
@@ -66,11 +66,11 @@ export default function Navbar(){
                             <SheetTitle>Check Out...</SheetTitle>
                         </SheetHeader>
                         <ul className = "flex flex-col gap-y-4">
-                            <li><a className = "p-5 transform transition duration-200 hover:underline" href = "#About">About</a></li>
-                            <li><a className = "p-5 transform transition duration-200 hover:underline" href = "#Experience">Experience</a></li>
-                            <li><a className = "p-5 transform transition duration-200 hover:underline" href = "#Projects">Projects</a></li>
-                            <li><a className = "p-5 transform transition duration-200 hover:underline" href = "#Skills">Skills</a></li>
-                            <li><a className = "p-5 transform transition duration-200 hover:underline" href = "#Contact">Contact</a></li>
+                            <li><a className = "p-5 transform transition duration-200 hover:underline" href = "#about">About</a></li>
+                            <li><a className = "p-5 transform transition duration-200 hover:underline" href = "#experience">Experience</a></li>
+                            <li><a className = "p-5 transform transition duration-200 hover:underline" href = "#projects">Projects</a></li>
+                            <li><a className = "p-5 transform transition duration-200 hover:underline" href = "#skills">Skills</a></li>
+                            <li><a className = "p-5 transform transition duration-200 hover:underline" href = "#contact">Contact</a></li>
                         </ul>
                     </SheetContent>
                 </Sheet>

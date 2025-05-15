@@ -204,3 +204,17 @@
 .experiences.in-view {
   animation: fade-in 2.3s ease;
 }
+
+.navbar:after{
+  content: '';
+  display: block;
+  width: 5%;
+  margin: 0 auto;
+  position: absolute;
+  inset: 0;
+  border-bottom: solid 0.2px #F1DFCB;
+  transition: all 0.5s ease 200ms;
+}
+.navbar.in-view:after{
+  width: 100%
+}
