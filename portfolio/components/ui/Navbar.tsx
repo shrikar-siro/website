@@ -53,28 +53,30 @@ export default function Navbar(){
                         </li>
                     </ul>
                 </div>
-            </nav>
 
-            {/** mobile navigation:  */}
-            <div className = "md:hidden">
-                <Sheet>
-                    <SheetTrigger>
-                        <Menu className = "p-0 text-white w-7 h-7" />
-                    </SheetTrigger>
-                    <SheetContent side="right" className = "w-64">
-                        <SheetHeader>
-                            <SheetTitle>Check Out...</SheetTitle>
-                        </SheetHeader>
-                        <ul className = "flex flex-col gap-y-4">
-                            <li><a className = "p-5 transform transition duration-200 hover:underline" href = "#about">About</a></li>
-                            <li><a className = "p-5 transform transition duration-200 hover:underline" href = "#experience">Experience</a></li>
-                            <li><a className = "p-5 transform transition duration-200 hover:underline" href = "#projects">Projects</a></li>
-                            <li><a className = "p-5 transform transition duration-200 hover:underline" href = "#skills">Skills</a></li>
-                            <li><a className = "p-5 transform transition duration-200 hover:underline" href = "#contact">Contact</a></li>
-                        </ul>
-                    </SheetContent>
-                </Sheet>
-            </div>
+                {/** mobile navigation:  
+                 * need to have hamburger menu inside the nav tags, otherwise it won't be on same plane.
+                */}
+                <div className = "md:hidden">
+                    <Sheet>
+                        <SheetTrigger>
+                            <Menu className = "p-0 text-white w-7 h-7" />
+                        </SheetTrigger>
+                        <SheetContent side="right" className = "w-64">
+                            <SheetHeader>
+                                <SheetTitle>Check Out...</SheetTitle>
+                            </SheetHeader>
+                            <ul className = "flex flex-col gap-y-4">
+                                <li><a className = "p-5 transform transition duration-200 hover:underline" href = "#about">About</a></li>
+                                <li><a className = "p-5 transform transition duration-200 hover:underline" href = "#experience">Experience</a></li>
+                                <li><a className = "p-5 transform transition duration-200 hover:underline" href = "#projects">Projects</a></li>
+                                <li><a className = "p-5 transform transition duration-200 hover:underline" href = "#skills">Skills</a></li>
+                                <li><a className = "p-5 transform transition duration-200 hover:underline" href = "#contact">Contact</a></li>
+                            </ul>
+                        </SheetContent>
+                    </Sheet>
+                </div>
+            </nav>
         </header>
 
 

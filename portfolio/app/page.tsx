@@ -53,7 +53,7 @@ export default function Home() {
           </div>
           <div className = "flex-grow max-w-l md:mt-10 sm:mt-10">
             <p className = "text-4xl font-bold mb-4 fade-in text-center">About Me</p>
-            <p className = "fade-in">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dolor quia sed labore 
+            <p className = "fade-in text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dolor quia sed labore 
               deleniti architecto illum provident saepe esse, necessitatibus ipsum ipsa itaque deserunt 
               sit ex consectetur cupiditate incidunt iure.</p>
           </div>
