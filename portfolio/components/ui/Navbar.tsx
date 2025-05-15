@@ -18,16 +18,14 @@ export default function Navbar(){
     }
     return(
         // desktop navigation.
-        <header className = "text-white w-full">
-            <nav className = "sticky top-0 z-50 bg-transparent flex justify-between items-center max-w-5xl mx-auto">
-                <div className = "flex items-center gap-[1vw]">
-                    {/* <img className = "h-[60px] w-[60px] rounded-full p-1" id = "profileImage" 
-                    src ="profile.jpeg" alt = "..."></img> */}
-                    <p className = "p-3 text-lg">Shrikar Siro</p>
+        <header className = "text-white w-full p-3">
+            <nav className = "sticky top-0 z-50 bg-transparent flex justify-between items-center mx-auto">
+                <div className = "flex items-center gap-auto">
+                    <p className = "text-lg">Shrikar Siro</p>
                 </div>
                 {/**have one div element for the list containing links. */}
                 <div className = "">
-                    <ul className = "hidden md:flex items-center gap-[1vw] font-normal">
+                    <ul className = "hidden md:flex items-center gap-auto font-normal">
                         <li>
                             <Button variant="ghost">
                                 <a href = "#about">About</a>

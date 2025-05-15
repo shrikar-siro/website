@@ -45,13 +45,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className = "py-50 flex place-content-center p-5">
+      <section id="about" className = "py-50 place-content-center">
         {/** have a big div as the container div, and 2 children divs. */}
-        <div className = "flex gap-10 items-start max-w-5xl">
+        <div className = "lg:flex lg:gap-20 items-start p-5 md:p-10 sm:p-15 mx-auto">
           <div className = "flex flex-shrink-0 justify-center">
             <img src = "profile.jpeg" alt = "..." className = "w-[400px] h-[540px] fade-in rounded-md border-4 border-neutral-200"></img>
           </div>
-          <div className = "flex-grow max-w-l">
+          <div className = "flex-grow max-w-l md:mt-10 sm:mt-10">
             <p className = "text-4xl font-bold mb-4 fade-in text-center">About Me</p>
             <p className = "fade-in">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dolor quia sed labore 
               deleniti architecto illum provident saepe esse, necessitatibus ipsum ipsa itaque deserunt 
@@ -64,8 +64,8 @@ export default function Home() {
         <div className = "text-4xl text-center">
           Experience
         </div>
-        <div className = "experiences animate flex flex-col mt-10 p-5">
-          <Card className = " w-full mx-auto max-w-5xl mb-5 bg-transparent border border-gray-300 transform transition hover:-translate-y-1 duration-300">
+        <div className = "flex flex-col experiences animate justify-center mt-10 md:p-10 sm:p-15 mx-auto">
+          <Card className = " w-full mx-auto mb-5 bg-transparent border border-gray-300 transform transition hover:-translate-y-1 duration-300">
             <CardHeader>
               <CardTitle>
                 <div className = "flex flex-row gap-1 items-center">
@@ -81,7 +81,7 @@ export default function Home() {
                 </ul>
             </CardContent>
           </Card>
-          <Card className = " w-full mx-auto max-w-5xl mb-5 bg-transparent border border-gray-300 transform transition hover:-translate-y-1 duration-300">
+          <Card className = " w-full mx-auto mb-5 bg-transparent border border-gray-300 transform transition hover:-translate-y-1 duration-300">
             <CardHeader>
               <CardTitle>
                 <div className = "flex flex-row gap-1 items-center">
@@ -99,7 +99,7 @@ export default function Home() {
                 </ul>
             </CardContent>
           </Card>
-          <Card className = "w-full mx-auto max-w-5xl mb-5 bg-transparent border border-gray-300 transform transition hover:-translate-y-1 duration-300">
+          <Card className = "w-full mx-auto mb-5 bg-transparent border border-gray-300 transform transition hover:-translate-y-1 duration-300">
             <CardHeader>
               <CardTitle>
                 <div className = "flex flex-row gap-1 items-center">
@@ -118,27 +118,38 @@ export default function Home() {
         </div>
       </section>
 
-      <section id = "projects" className = "py-50 flex place-content-center p-5 experiences animate">
-        <div className = "flex lg:gap-30 md:gap-15 items-center max-w-5xl min-w-xl">
-          <div className = "flex-grow max-w-l">
+      <section id = "projects" className = "py-50 grid place-items-center p-5 sm:p-15 experiences animate">
+        <div className = "flex flex-col lg:flex-row items-center justify-center lg:gap-30">
+          <div className = "flex-grow">
             <p className = "text-4xl font-bold mb-4 fade-in text-center">Projects</p>
              <p className = "fade-in">Here are some of my projects. Feel free to look around! For more information about
               each project, click on the card to visit its GitHub Repo. 
              </p>
           </div>
-          <div className = "">
+          <div className = "md:mt-5 sm:mt-5">
                   <Carousel
                     opts={{
                       align: "start",
                     }}
-                    className="w-full min-w-lg"
+                    className="w-full"
                   >
                   <CarouselContent>
                     <CarouselItem className = "md:basis-1/2 lg:basis-1/1">
-                      <div className = "border-2 border-gray-200 border-opacity-60 rounded-md overflow-hidden transform transition duration-130 hover:bg-gray-900">
-                        <img src = "laLigaInsights.png" className = "lg:h-72 md:h-48 w-full object-cover object-center"></img>
-                        <div className = "p-6">
+                      <div className = "lg:h-[500px] md:h-[500px] border-2 border-gray-200 border-opacity-60 rounded-md overflow-hidden transform transition duration-150 hover:bg-gray-900 flex flex-col">
+                        <img src = "laLigaInsights.png" className = "w-full h-[250px] object-cover object-center"></img>
+                        <div className = "p-6 hidden md:block flex-grow">
                           <h1 className = "text-2xl font-semibold mb-3 text-center">LaLiga Insights</h1>
+                          <p className = "leading-relaxed mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ipsum similique, nisi, maiores ipsam 
+                            natus reiciendis 
+                            consequuntur alias est atque.</p>
+                        </div>
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem className = "md:basis-1/2 lg:basis-1/1">
+                      <div className = "lg:h-[500px] md:h-[500px] border-2 border-gray-200 border-opacity-60 rounded-md overflow-hidden transform transition duration-150 hover:bg-gray-900">
+                        <img src = "LungCancerClassifier.png" className = "w-full h-[250px] object-cover object-center"></img>
+                        <div className = "p-6 hidden md:block flex-grow">
+                          <h1 className = "text-2xl font-semibold mb-3 text-center">Lung Cancer Classifier</h1>
                           <p className = "leading-relaxed mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ipsum similique, nisi, maiores ipsam 
                             natus reiciendis 
                             consequuntur alias est atque iste sequi beatae fugiat 

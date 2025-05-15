@@ -163,7 +163,7 @@
 }
 
 .fade-in {
-  animation: fade-in 0.8s ease-out forwards;
+  animation: fade-in 1.5s ease-out forwards;
 }
 
 .text-container{
@@ -202,5 +202,5 @@
 
 
 .experiences.in-view {
-  animation: fade-in 2s ease;
+  animation: fade-in 2.3s ease;
 }
