@@ -47,11 +47,11 @@ export default function Home() {
 
       <section id="about" className = "py-35 place-content-center scroll-mt-20">
         {/** have a big div as the container div, and 2 children divs. */}
-        <div className = "lg:flex lg:gap-20 items-start p-5 md:p-10 sm:p-15 mx-auto">
+        <div className = "lg:flex lg:gap-20 items-start p-15 md:p-10 sm:p-5 mx-auto">
           <div className = "flex flex-shrink-0 justify-center">
             <img src = "profile.jpeg" alt = "..." className = "w-[400px] h-[540px] fade-in rounded-md border-4 border-neutral-200"></img>
           </div>
-          <div className = "flex-grow max-w-l md:mt-10 sm:mt-10">
+          <div className = "flex-grow max-w-l mt-10 md:mt-10">
             <p className = "text-4xl font-bold mb-4 fade-in text-center">About Me</p>
             <p className = "fade-in text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dolor quia sed labore 
               deleniti architecto illum provident saepe esse, necessitatibus ipsum ipsa itaque deserunt 
@@ -64,19 +64,19 @@ export default function Home() {
         <div className = "text-4xl text-center">
           Experience
         </div>
-        <div className = "flex flex-col experiences animate justify-center mt-10 md:p-10 sm:p-15 mx-auto">
+        <div className = "flex flex-col experiences animate justify-center mt-10 p-15 md:p-10 sm:p-5 mx-auto">
           <Card className = " w-full mx-auto mb-5 bg-transparent border border-gray-300 transform transition hover:-translate-y-1 duration-300">
             <CardHeader>
               <CardTitle>
-                <div className = "flex flex-row gap-1 items-center">
+                <div className = "flex flex-row gap-2 items-center">
                   <img className = "w-10 h-10" src = "stLogo.jpg" alt = "..."></img>
-                  <p>Incoming Software Engineering Intern</p>
+                  <p className = "text-lg">Incoming Software Engineering Intern</p>
                 </div>
               </CardTitle>
               <CardDescription>ST Engineering</CardDescription>
             </CardHeader>
             <CardContent>
-                <ul className = "font-normal">
+                <ul className = "font-normal text-lg">
                   <li>• Summer Software Engineering Intern on the DevOps team.</li>
                 </ul>
             </CardContent>
@@ -84,15 +84,15 @@ export default function Home() {
           <Card className = " w-full mx-auto mb-5 bg-transparent border border-gray-300 transform transition hover:-translate-y-1 duration-300">
             <CardHeader>
               <CardTitle>
-                <div className = "flex flex-row gap-1 items-center">
+                <div className = "flex flex-row gap-2 items-center">
                   <img className = "w-10 h-10" src = "uvaIcon.png" alt = "..."></img>
-                  <p>Undergraduate Research Intern</p>
+                  <p className = "text-lg">Undergraduate Research Intern</p>
                 </div>
               </CardTitle>
               <CardDescription>UVA School of Data Science</CardDescription>
             </CardHeader>
             <CardContent>
-                <ul className = "font-normal">
+                <ul className = "font-normal text-lg">
                   <li>• Develop a visual analytics platform using Python and SQL to analyze multi-modal neuroscience datasets.</li>
                   <li>• Support early diagnosis and treatment strategies for cognitive disorders through deep learning architectures.</li>
                   <li>• Optimize model accuracy and provide an intuitive user interface for data exploration.</li>
@@ -102,15 +102,15 @@ export default function Home() {
           <Card className = "w-full mx-auto mb-5 bg-transparent border border-gray-300 transform transition hover:-translate-y-1 duration-300">
             <CardHeader>
               <CardTitle>
-                <div className = "flex flex-row gap-1 items-center">
+                <div className = "flex flex-row gap-2 items-center">
                   <img className = "w-10 h-10" src = "uvaEngrLogo.png" alt = "..."></img>
-                  <p>Undergraduate Teaching Assistant</p>
+                  <p className = "text-lg">Undergraduate Teaching Assistant</p>
                 </div>
               </CardTitle>
               <CardDescription>UVA School of Engineering</CardDescription>
             </CardHeader>
             <CardContent>
-                <ul className = "font-normal">
+                <ul className = "font-normal text-lg">
                   <li>• Teaching Assistant for CS 2130 - Computer Systems & Organization I</li>
                 </ul>
             </CardContent>
@@ -118,15 +118,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section id = "projects" className = "py-30 grid place-items-center p-5 sm:p-15 experiences animate scroll-mt-20">
+      <section id = "projects" className = "py-30 grid place-items-center p-15 md:p-10 sm:p-5 experiences animate scroll-mt-20">
         <div className = "flex flex-col lg:flex-row items-center justify-center lg:gap-30">
           <div className = "flex-grow">
             <p className = "text-4xl font-bold mb-4 fade-in text-center">Projects</p>
-             <p className = "fade-in text-center">Here are some of my projects. Feel free to look around! For more information about
+             <p className = "fade-in text-center text-xl">Here are some of my projects. Feel free to look around! For more information about
               each project, click on the card to visit its GitHub Repo. 
              </p>
           </div>
-          <div className = "md:mt-5 sm:mt-5">
+          <div className = "mt-5 md:mt-5 sm:mt-5 p-5 md:p-0">
                   <Carousel
                     opts={{
                       align: "start",
