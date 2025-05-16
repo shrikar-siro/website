@@ -38,7 +38,7 @@ export default function Home() {
     // add the navbar component here - or add it in the layout page.
     <>
       <section id="first">
-        <div className = "text-7xl font-semibold mt-50 text-center fade-in">
+        <div className = "text-4xl md:text-6xl lg:text-7xl font-semibold mt-50 text-center fade-in">
           <div className = "text-container">
             <p className = "text-to-animate">Hey. I'm Shrikar.</p>
           </div>
@@ -126,44 +126,46 @@ export default function Home() {
               each project, click on the card to visit its GitHub Repo. 
              </p>
           </div>
-          <div className = "mt-5 md:mt-5 sm:mt-5 p-5 md:p-0">
-                  <Carousel
-                    opts={{
-                      align: "start",
-                    }}
-                    className="w-full"
-                  >
-                  <CarouselContent>
-                    <CarouselItem className = "md:basis-1/2 lg:basis-1/1">
-                      <div className = "lg:h-[500px] md:h-[500px] border-2 border-gray-200 border-opacity-60 rounded-md overflow-hidden transform transition duration-150 hover:bg-gray-900 flex flex-col">
-                        <img src = "laLigaInsights.png" className = "w-full h-[250px] object-cover object-center"></img>
-                        <div className = "lg:p-6 md:p-4 sm:p-4 hidden md:block flex-grow text-center">
-                          <h1 className = "text-lg font-semibold mb-3 text-center">LaLiga Insights</h1>
-                          <p className = "lg:text-md md:text-base mx-auto leading-relaxed mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ipsum similique, nisi, maiores ipsam 
-                            natus reiciendis 
-                            consequuntur alias est atque.</p>
-                        </div>
-                      </div>
-                    </CarouselItem>
-                    <CarouselItem className = "md:basis-1/2 lg:basis-1/1">
-                      <div className = "lg:h-[500px] md:h-[500px] border-2 border-gray-200 border-opacity-60 rounded-md overflow-hidden transform transition duration-150 hover:bg-gray-900">
-                        <img src = "LungCancerClassifier.png" className = "w-full h-[250px] object-cover object-center"></img>
-                        <div className = "lg:p-6 md:p-4 sm:p-4 hidden md:block flex-grow text-center">
-                          <h1 className = "text-lg font-semibold mb-3 text-center">Lung Cancer Classifier</h1>
-                          <p className = "lg:text-md md:text-base mx-auto leading-relaxed mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ipsum similique, nisi, maiores ipsam 
-                            natus reiciendis 
-                            consequuntur alias est atque iste sequi beatae fugiat 
-                            reprehenderit quis quo repudiandae neque earum.</p>
-                        </div>
-                      </div>
-                    </CarouselItem>
-                  </CarouselContent>
-                  <CarouselPrevious />
-                  <CarouselNext />
-                </Carousel>
+          <div className = "mt-5 md:mt-5 sm:mt-5 p-3 md:p-0">
+              <Carousel
+                opts={{
+                  align: "start",
+                }}
+                className="w-full"
+              >
+              <CarouselContent>
+                <CarouselItem className = "md:basis-1/2 lg:basis-1/1">
+                  <div className = "lg:h-[500px] md:h-[500px] border-2 border-gray-200 border-opacity-60 rounded-md overflow-hidden transform transition duration-150 hover:bg-gray-900 flex flex-col">
+                    <img src = "laLigaInsights.png" className = "w-full h-[250px] object-cover object-center"></img>
+                    <div className = "lg:p-6 md:p-4 sm:p-4 hidden md:block flex-grow text-center">
+                      <h1 className = "text-lg font-semibold mb-3 text-center">LaLiga Insights</h1>
+                      <p className = "lg:text-md md:text-base mx-auto leading-relaxed mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ipsum similique, nisi, maiores ipsam 
+                        natus reiciendis 
+                        consequuntur alias est atque.</p>
+                    </div>
+                  </div>
+                </CarouselItem>
+                <CarouselItem className = "md:basis-1/2 lg:basis-1/1">
+                  <div className = "lg:h-[500px] md:h-[500px] border-2 border-gray-200 border-opacity-60 rounded-md overflow-hidden transform transition duration-150 hover:bg-gray-900">
+                    <img src = "LungCancerClassifier.png" className = "w-full h-[250px] object-cover object-center"></img>
+                    <div className = "lg:p-6 md:p-4 sm:p-4 hidden md:block flex-grow text-center">
+                      <h1 className = "text-lg font-semibold mb-3 text-center">Lung Cancer Classifier</h1>
+                      <p className = "lg:text-md md:text-base mx-auto leading-relaxed mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ipsum similique, nisi, maiores ipsam 
+                        natus reiciendis 
+                        consequuntur alias est atque iste sequi beatae fugiat 
+                        reprehenderit quis quo repudiandae neque earum.</p>
+                    </div>
+                  </div>
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
         </div>
       </section>
+
+
     </>
   );
 }
