@@ -155,25 +155,43 @@ export default function Home() {
               >
               <CarouselContent>
                 <CarouselItem className = "md:basis-1/2 lg:basis-1/1">
-                  <div className = "lg:h-[500px] md:h-[500px] border-2 border-opacity-60 rounded-md overflow-hidden transform transition duration-150 hover:bg-black/30">
+                  <div className = "flex flex-col justify-between lg:h-[540px] md:h-[540px] border-2 border-opacity-60 rounded-md overflow-hidden transform transition duration-150 hover:bg-black/30">
                     <img src = "laLigaInsights.png" className = "w-full h-[300px] object-cover object-center"></img>
-                    <div className = "lg:p-6 md:p-4 sm:p-4 hidden md:block flex-grow text-center">
+                    <div className = "lg:p-6 p-4 md:p-3 hidden md:block flex-grow text-center">
                       <h1 className = "text-lg font-semibold mb-3 text-center">LaLiga Insights</h1>
-                      <p className = "lg:text-base md:text-sm mx-auto leading-relaxed mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ipsum similique, nisi, maiores ipsam 
+                      <p className = "lg:text-base md:text-sm mx-auto leading-relaxed mb-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ipsum similique, nisi, maiores ipsam 
                         natus reiciendis 
                         consequuntur alias est atque.</p>
+                    </div>
+                    <div className = "flex flex-row justify-between place-content-end p-3">
+                      <div className = "items-center">
+                         <h2 className = "text-md font-semibold p-2">Skills Used:</h2>
+                      </div>
+                      <div className = "flex flex-row">
+                        <img src = {mySkills[0].icon} alt="Python" className="w-10 h-10 ms-3 p-2 border-1 rounded-md"></img>
+                      </div>
                     </div>
                   </div>
                 </CarouselItem>
                 <CarouselItem className = "md:basis-1/2 lg:basis-1/1">
-                  <div className = "lg:h-[500px] md:h-[500px] border-2 border-opacity-60 rounded-md overflow-hidden transform transition duration-150 hover:bg-black/30">
+                  <div className = "flex flex-col justify-between lg:h-[540px] md:h-[540px] border-2 border-opacity-60 rounded-md overflow-hidden transform transition duration-150 hover:bg-black/30">
                     <img src = "LungCancerClassifier.png" className = "w-full h-[300px] object-cover object-center"></img>
-                    <div className = "lg:p-6 md:p-4 sm:p-4 hidden md:block flex-grow text-center">
+                    <div className = "lg:p-6 p-4 md:p-3 hidden md:block flex-grow text-center">
                       <h1 className = "text-lg font-semibold mb-3 text-center">Lung Cancer Classifier</h1>
-                      <p className = "lg:text-base md:text-sm mx-auto leading-relaxed mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ipsum similique, nisi, maiores ipsam 
+                      <p className = "lg:text-base md:text-sm mx-auto leading-relaxed">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ipsum similique, nisi, maiores ipsam 
                         natus reiciendis 
                         consequuntur alias est atque iste sequi beatae fugiat 
                         reprehenderit quis quo repudiandae neque earum.</p>
+                    </div>
+                    <div className = "flex flex-row justify-between place-content-end p-3">
+                      <div className = "items-center">
+                         <h2 className = "text-md font-semibold p-2">Skills Used:</h2>
+                      </div>
+                      <div className = "flex flex-row">
+                        <img src = {mySkills[0].icon} alt="Python" className="w-10 h-10 ms-3 p-2 border-1 rounded-md"></img>
+
+                        <img src = {mySkills[7].icon} alt="Python" className="w-10 h-10 ms-3 p-2 border-1 rounded-md"></img>
+                      </div>
                     </div>
                   </div>
                 </CarouselItem>
