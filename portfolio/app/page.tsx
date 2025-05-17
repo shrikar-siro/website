@@ -21,6 +21,7 @@ import {
 import { useEffect } from "react";
 
 import { setupIntersectionAnimations } from "../app/animateIfInView"
+import { ContactForm } from "./contactForm";
 
 
 
@@ -154,8 +155,8 @@ export default function Home() {
                 orientation="horizontal"
               >
               <CarouselContent>
-                <CarouselItem className = "md:basis-1/2 lg:basis-1/1">
-                  <div className = "flex flex-col justify-between lg:h-[540px] md:h-[540px] border-2 border-opacity-60 rounded-md overflow-hidden transform transition duration-150 hover:bg-black/30">
+                <CarouselItem className = "md:basis-1/2 lg:basis-1/1 flex items-stretch">
+                  <div className = "flex flex-col justify-between border-2 border-opacity-60 rounded-md overflow-hidden transform transition duration-150 hover:bg-black/30">
                     <img src = "laLigaInsights.png" className = "w-full h-[300px] object-cover object-center"></img>
                     <div className = "lg:p-6 p-4 md:p-3 hidden md:block flex-grow text-center">
                       <h1 className = "text-lg font-semibold mb-3 text-center">LaLiga Insights</h1>
@@ -173,12 +174,12 @@ export default function Home() {
                     </div>
                   </div>
                 </CarouselItem>
-                <CarouselItem className = "md:basis-1/2 lg:basis-1/1">
-                  <div className = "flex flex-col justify-between lg:h-[540px] md:h-[540px] border-2 border-opacity-60 rounded-md overflow-hidden transform transition duration-150 hover:bg-black/30">
+                <CarouselItem className = "md:basis-1/2 lg:basis-1/1 flex items-stretch">
+                  <div className = "flex flex-col justify-between border-2 border-opacity-60 rounded-md overflow-hidden transform transition duration-150 hover:bg-black/30">
                     <img src = "LungCancerClassifier.png" className = "w-full h-[300px] object-cover object-center"></img>
                     <div className = "lg:p-6 p-4 md:p-3 hidden md:block flex-grow text-center">
-                      <h1 className = "text-lg font-semibold mb-3 text-center">Lung Cancer Classifier</h1>
-                      <p className = "lg:text-base md:text-sm mx-auto leading-relaxed">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ipsum similique, nisi, maiores ipsam 
+                      <h1 className = "text-lg font-semibold mb-3 text-center mb-2">Lung Cancer Classifier</h1>
+                      <p className = "lg:text-base md:text-sm mx-auto leading-relaxed mb-auto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ipsum similique, nisi, maiores ipsam 
                         natus reiciendis 
                         consequuntur alias est atque iste sequi beatae fugiat 
                         reprehenderit quis quo repudiandae neque earum.</p>
@@ -204,11 +205,11 @@ export default function Home() {
       </section>
 
       <section id="skills" className="py-40 place-content-center -scroll-mt-10">
-        <div className = "text-4xl text-center font-bold">
+        <div className = "text-4xl fade-in text-center font-bold">
           Skills
         </div>
         {/*grid of cards with each skill pulled from list above.*/}
-        <div className = "m-auto mt-5 p-15 md:p-10 sm:p-5 grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-4 experiences animate">
+        <div className = "m-auto mt-5 p-15 md:p-10 sm:p-10 grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-4 experiences animate">
           {mySkills.map((item, index) =>(
             <div key = {index} className = "justify-center items-center p-10 border-1 rounded-md transform transition duration-200 hover:border-blue-500">
                 <img className = "w-auto h-20 lg:h-30 md:h-25 mx-auto mb-3" src={item.icon} />
@@ -217,6 +218,19 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/** contact secction. form for form*/}
+      <section id="contact">
+        <div className = "flex flex-col lg:flex-row items-center justify-center gap-15 lg:gap-20 p-15 md:p-10 sm:p-5 mx-auto">
+          <div className = "flex-grow max-w-3xl text-4xl fade-in text-center font-bold mb-5 sm:mb-5">
+            Contact Me
+          </div>
+          <div className = "w-full lg:max-w-2xl mx-auto justify-center items-center p-5 md:p-0">
+            <ContactForm />
+          </div>
+        </div>
+      </section>
+
 
     </>
   );
