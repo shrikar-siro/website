@@ -146,7 +146,7 @@ export default function Home() {
               each project, click on the card to visit its GitHub Repo. 
              </p>
           </div>
-          <div className = "mt-5 md:mt-5 sm:mt-5 p-3 md:p-0">
+          <div className = "mt-5 md:mt-5 sm:mt-5 p-5 md:p-0">
               <Carousel
                 opts={{
                   align: "start",
@@ -209,9 +209,9 @@ export default function Home() {
           Skills
         </div>
         {/*grid of cards with each skill pulled from list above.*/}
-        <div className = "m-auto mt-5 p-15 md:p-10 sm:p-10 grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-4 experiences animate">
+        <div className = "mx-auto mt-5 p-15 md:p-10 sm:p-10 grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-4 experiences animate">
           {mySkills.map((item, index) =>(
-            <div key = {index} className = "justify-center items-center p-10 border-1 rounded-md transform transition duration-200 hover:border-blue-500">
+            <div key = {index} className = "justify-center items-center p-15 border-1 rounded-md transform transition duration-200 hover:border-blue-500">
                 <img className = "w-auto h-20 lg:h-30 md:h-25 mx-auto mb-3" src={item.icon} />
                 <h3 className = "text-xl text-center">{item.name}</h3>
             </div>
