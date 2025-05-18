@@ -36,11 +36,12 @@ export default function Home() {
     setupIntersectionAnimations();
   }, []);
 
+  
   const mySkills = [ 
     {name: "Python", icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg'},
     {name: "Java", icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-plain.svg'},
     {name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"},
-    {name: "Amazon Web Services (AWS)", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"},
+    {name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"},
     {name: "React.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"},
     {name: "C", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"},
     {name: "PyTorch", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg"},
@@ -52,7 +53,7 @@ export default function Home() {
     // add the navbar component here - or add it in the layout page.
     <>
       <section id="first">
-        <div className = "text-4xl md:text-6xl lg:text-7xl font-semibold mt-50 text-center fade-in">
+        <div className = "text-5xl md:text-6xl lg:text-7xl font-semibold mt-50 text-center fade-in">
           <div className = "text-container">
             <p className = "text-to-animate bg-gradient-to-r from-blue-500 to-white text-transparent bg-clip-text inline-block">Hey. I'm Shrikar.</p>
           </div>

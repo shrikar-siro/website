@@ -59,8 +59,8 @@ export default function Navbar(){
                 */}
                 <div className = "md:hidden">
                     <Sheet>
-                        <SheetTrigger>
-                            <Menu className = "p-0 text-white w-7 h-7" />
+                        <SheetTrigger className = "flex items-center justify-center">
+                            <Menu className = "p-0 text-white w-8 h-8" />
                         </SheetTrigger>
                         <SheetContent side="right" className = "w-64">
                             <SheetHeader>
