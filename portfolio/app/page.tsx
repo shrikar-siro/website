@@ -54,7 +54,7 @@ export default function Home() {
       <section id="first">
         <div className = "text-4xl md:text-6xl lg:text-7xl font-semibold mt-50 text-center fade-in">
           <div className = "text-container">
-            <p className = "text-to-animate">Hey. I'm Shrikar.</p>
+            <p className = "text-to-animate bg-gradient-to-r from-blue-500 to-white text-transparent bg-clip-text inline-block">Hey. I'm Shrikar.</p>
           </div>
         </div>
       </section>
@@ -66,8 +66,10 @@ export default function Home() {
             <img src = "profile.jpeg" alt = "..." className = "w-[400px] h-[540px] fade-in rounded-md border-4 border-neutral-200"></img>
           </div>
           <div className = "flex-grow max-w-l mt-10 md:mt-10">
-            <p className = "text-4xl font-bold mb-4 fade-in text-center">About Me</p>
-            <p className = "fade-in text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dolor quia sed labore 
+            <div className = "text-center">
+              <p className = "text-4xl font-bold mb-4 fade-in text-center">About Me</p>
+            </div>
+            <p className = "fade-in text-2xl text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dolor quia sed labore 
               deleniti architecto illum provident saepe esse, necessitatibus ipsum ipsa itaque deserunt 
               sit ex consectetur cupiditate incidunt iure.</p>
           </div>
@@ -76,7 +78,7 @@ export default function Home() {
 
       <section id="experience" className = "place-content-center font-bold mb-40 scroll-mt-20">
         <div className = "text-4xl text-center">
-          Experience
+          <p>Experience</p>
         </div>
         <div className = "flex flex-col experiences animate justify-center mt-10 p-15 md:p-10 sm:p-5 mx-auto">
           <Card className = " w-full mx-auto mb-5 bg-transparent border-2 transform transition duration-300 hover:border-blue-500">
@@ -155,8 +157,8 @@ export default function Home() {
                 orientation="horizontal"
               >
               <CarouselContent>
-                <CarouselItem className = "md:basis-1/2 lg:basis-1/1 flex items-stretch">
-                  <div className = "flex flex-col justify-between border-2 border-opacity-60 rounded-md overflow-hidden transform transition duration-150 hover:bg-black/30">
+                <CarouselItem className = "md:basis-1/2 lg:basis-1/1 flex items-stretch w-full">
+                  <div className = "flex flex-col justify-center border-2 border-opacity-60 rounded-md overflow-hidden transform transition duration-150 hover:bg-black/30">
                     <img src = "laLigaInsights.png" className = "w-full h-[300px] object-cover object-center"></img>
                     <div className = "lg:p-6 p-4 md:p-3 hidden md:block flex-grow text-center">
                       <h1 className = "text-lg font-semibold mb-3 text-center">LaLiga Insights</h1>
@@ -175,7 +177,7 @@ export default function Home() {
                   </div>
                 </CarouselItem>
                 <CarouselItem className = "md:basis-1/2 lg:basis-1/1 flex items-stretch">
-                  <div className = "flex flex-col justify-between border-2 border-opacity-60 rounded-md overflow-hidden transform transition duration-150 hover:bg-black/30">
+                  <div className = "flex flex-col justify-center border-2 border-opacity-60 rounded-md overflow-hidden transform transition duration-150 hover:bg-black/30">
                     <img src = "LungCancerClassifier.png" className = "w-full h-[300px] object-cover object-center"></img>
                     <div className = "lg:p-6 p-4 md:p-3 hidden md:block flex-grow text-center">
                       <h1 className = "text-lg font-semibold mb-3 text-center mb-2">Lung Cancer Classifier</h1>

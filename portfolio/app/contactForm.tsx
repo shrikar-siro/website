@@ -35,7 +35,7 @@ export function ContactForm(){
 
     return(
         <>
-            <div className = "flex items-center justify-center mx-auto p-6 border-1 rounded-lg shadow-md bg-black/30">
+            <div className = "flex items-center justify-center mx-auto p-6 border-1 rounded-lg shadow-md bg-black/20">
                 <FormProvider {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className = "space-y-8 w-full">
                         <FormField 
@@ -77,7 +77,7 @@ export function ContactForm(){
                                 </FormItem>
                             )} 
                         />
-                        <Button type="submit" className = "w-full">Submit</Button>
+                        <Button type="submit" className = "w-full inline-block bg-gradient-to-r from-blue-400 to-white transform transition duration-200 hover:opacity-70">Submit</Button>
                     </form>
                 </FormProvider>
             </div>
