@@ -98,6 +98,11 @@ export default function Home() {
                 <ul className = "font-normal text-md">
                   <li>• Summer Software Engineering Intern on the DevOps team.</li>
                 </ul>
+                <div className = "place-content-start flex flex-row mt-5">
+                    <img src = {mySkills[0].icon} alt="Python" className="w-10 h-10 ms-3 p-2 border-1 rounded-md bg-black/40"></img>
+                    <img src = {mySkills[2].icon} alt="Python" className="w-10 h-10 ms-3 p-2 border-1 rounded-md bg-black/40"></img>
+                    <img src = {mySkills[3].icon} alt="Python" className="w-10 h-10 ms-3 p-2 border-1 rounded-md bg-black/40"></img>
+                </div>
             </CardContent>
           </Card>
           <Card className = " w-full mx-auto mb-5 bg-transparent border-2 transform transition duration-300 hover:bg-black/30">
@@ -113,15 +118,22 @@ export default function Home() {
               </CardTitle>
             </CardHeader>
             <CardContent>
-                <ul className = "font-normal text-md">
+                <ul className = "font-normal text-md mb-3">
                   <li>• Develop a visual analytics platform using Python and SQL to analyze multi-modal neuroscience datasets.</li>
                   <li>• Support early diagnosis and treatment strategies for cognitive disorders through deep learning architectures.</li>
                   <li>• Optimize model accuracy and provide an intuitive user interface for data exploration.</li>
                 </ul>
+                
+                <div className = "place-content-start flex flex-row mt-5">
+                    <img src = {mySkills[0].icon} alt="Python" className="w-10 h-10 ms-3 p-2 border-1 rounded-md bg-black/40"></img>
+                    <img src = {mySkills[6].icon} alt="Python" className="w-10 h-10 ms-3 p-2 border-1 rounded-md bg-black/40"></img>
+                    <img src = {mySkills[7].icon} alt="Python" className="w-10 h-10 ms-3 p-2 border-1 rounded-md bg-black/40"></img>
+                </div>
             </CardContent>
           </Card>
           <Card className = "w-full mx-auto mb-5 bg-transparent border-2 transform transition duration-300  hover:bg-black/30">
             <CardHeader>
+          
               <CardTitle>
                 <div className = "flex flex-row gap-2 items-center">
                   <img className = "w-10 h-10" src = "uvaEngrLogo.png" alt = "..."></img>
@@ -136,6 +148,10 @@ export default function Home() {
                 <ul className = "font-normal text-base">
                   <li>• Teaching Assistant for CS 2130 - Computer Systems & Organization I</li>
                 </ul>
+                <div className = "place-content-start flex flex-row mt-5">
+                    <img src = {mySkills[0].icon} alt="Python" className="w-10 h-10 ms-3 p-2 border-1 rounded-md bg-black/40"></img>
+                    <img src = {mySkills[5].icon} alt="Python" className="w-10 h-10 ms-3 p-2 border-1 rounded-md bg-black/40"></img>
+                </div>
             </CardContent>
           </Card>
         </div>
@@ -172,7 +188,7 @@ export default function Home() {
                          <h2 className = "text-md font-semibold p-2">Skills Used:</h2>
                       </div>
                       <div className = "flex flex-row">
-                        <img src = {mySkills[0].icon} alt="Python" className="w-10 h-10 ms-3 p-2 border-1 rounded-md"></img>
+                        <img src = {mySkills[0].icon} alt="Python" className="w-10 h-10 ms-3 p-2 border-1 rounded-md bg-black/40"></img>
                       </div>
                     </div>
                   </div>
@@ -192,9 +208,8 @@ export default function Home() {
                          <h2 className = "text-md font-semibold p-2">Skills Used:</h2>
                       </div>
                       <div className = "flex flex-row">
-                        <img src = {mySkills[0].icon} alt="Python" className="w-10 h-10 ms-3 p-2 border-1 rounded-md"></img>
-
-                        <img src = {mySkills[7].icon} alt="Python" className="w-10 h-10 ms-3 p-2 border-1 rounded-md"></img>
+                        <img src = {mySkills[0].icon} alt="Python" className="w-10 h-10 ms-3 p-2 border-1 rounded-md bg-black/40"></img>
+                        <img src = {mySkills[7].icon} alt="Python" className="w-10 h-10 ms-3 p-2 border-1 rounded-md bg-black/40"></img>
                       </div>
                     </div>
                   </div>
@@ -214,9 +229,9 @@ export default function Home() {
         {/*grid of cards with each skill pulled from list above.*/}
         <div className = "mx-auto mt-5 p-15 md:p-10 sm:p-10 grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-4 experiences animate">
           {mySkills.map((item, index) =>(
-            <div key = {index} className = "justify-center items-center p-15 border-1 rounded-md transform transition duration-200 hover:border-blue-500">
-                <img className = "w-auto h-20 lg:h-30 md:h-25 mx-auto mb-3" src={item.icon} />
-                <h3 className = "text-xl text-center">{item.name}</h3>
+            <div key = {index} className = "flex flex-col text-center justify-center items-center p-10 border-1 rounded-md transform transition duration-200 hover:border-blue-500">
+                <img className = "w-auto h-20 mx-auto mb-3" src={item.icon} />
+                <h3 className = "md:text-xl">{item.name}</h3>
             </div>
           ))}
         </div>
@@ -228,7 +243,7 @@ export default function Home() {
           <div className = "flex-grow max-w-3xl text-4xl fade-in text-center font-bold mb-5 sm:mb-5">
             Contact Me
           </div>
-          <div className = "w-full lg:max-w-2xl mx-auto justify-center items-center p-5 md:p-0">
+          <div className = "w-full lg:max-w-2xl mx-auto justify-center items-center p-5 md:p-0 experiences animate">
             <ContactForm />
           </div>
         </div>
