@@ -82,7 +82,7 @@ export default function Home() {
           <p>Experience</p>
         </div>
         <div className = "flex flex-col experiences animate justify-center mt-10 p-15 md:p-10 sm:p-5 mx-auto">
-          <Card className = " w-full mx-auto mb-5 bg-transparent border-2 transform transition duration-300 hover:border-blue-500">
+          <Card className = "w-full mx-auto mb-5 bg-transparent border-2 transform transition duration-300 hover:bg-black/30">
             <CardHeader>
               <CardTitle>
                 <div className = "flex flex-row gap-2 items-center">
@@ -100,7 +100,7 @@ export default function Home() {
                 </ul>
             </CardContent>
           </Card>
-          <Card className = " w-full mx-auto mb-5 bg-transparent border-2 transform transition duration-300 hover:border-blue-500">
+          <Card className = " w-full mx-auto mb-5 bg-transparent border-2 transform transition duration-300 hover:bg-black/30">
             <CardHeader>
               <CardTitle>
                 <div className = "flex flex-row gap-2 items-center">
@@ -120,7 +120,7 @@ export default function Home() {
                 </ul>
             </CardContent>
           </Card>
-          <Card className = "w-full mx-auto mb-5 bg-transparent border-2 transform transition duration-300 hover:border-blue-500">
+          <Card className = "w-full mx-auto mb-5 bg-transparent border-2 transform transition duration-300  hover:bg-black/30">
             <CardHeader>
               <CardTitle>
                 <div className = "flex flex-row gap-2 items-center">

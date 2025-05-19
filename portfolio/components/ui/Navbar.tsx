@@ -17,8 +17,9 @@ export default function Navbar(){
 
     }
     return(
-        // desktop navigation.
-        <header className = "w-full sticky top-0 z-50 backdrop-blur-md bg-transparent p-3 border-b border-white/20">
+        <>
+        <div id = "overlay"></div>
+        <header className = "sticky top-0 z-50 backdrop-blur-md transform transition duration-200 hover:bg-black/30 p-4 border-b border-white/20">
             <nav className = "bg-transparent flex justify-between items-center mx-auto">
                 <div className = "flex items-center">
                     <p className = "text-lg">Shrikar Siro</p>
@@ -78,7 +79,6 @@ export default function Navbar(){
                 </div>
             </nav>
         </header>
-
-
+        </>
     );
 }

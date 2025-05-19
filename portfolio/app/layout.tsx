@@ -27,10 +27,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased custom-gradient mx-auto px-2 max-w-7xl`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased custom-gradient`}
       >
-        <Navbar />
-        {children}
+        <div className = "sticky top-0 z-50 w-full">
+          <Navbar />
+        </div>
+        <main className = "max-w-7xl mx-auto px-2">{children}</main>
       </body>
     </html>
   );
