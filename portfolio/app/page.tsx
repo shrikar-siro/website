@@ -53,7 +53,7 @@ export default function Home() {
   ];
 
   const myExperience = {
-    "ST Engineering":{
+    "ST Engineering IDirect":{
       icon: "stLogo.jpg",
       role: "Incoming Software Engineering Intern",
       date: "May 2025 - Present",
@@ -125,7 +125,7 @@ export default function Home() {
         <div className = "mt-5 p-15 md:p-10 sm:p-5">
           <div className = "flex flex-col md:flex-row justify-center items-start md:gap-25">
             {/** button row */}
-            <div className = "flex flex-row md:flex-col mx-auto">
+            <div className = "flex flex-row md:flex-col mx-auto md:w-sm">
               {Object.keys(myExperience).map(exp => (
                 <button 
                 key={exp} 
