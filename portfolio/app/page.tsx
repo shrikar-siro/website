@@ -37,7 +37,7 @@ export default function Home() {
     setupIntersectionAnimations();
   }, []);
 
-  const [expName, setExpName] = useState("ST Engineering");
+
 
   
   const mySkills = [ 
@@ -54,7 +54,7 @@ export default function Home() {
 
   const myExperience = {
     "ST Engineering IDirect":{
-      icon: "stLogo.jpg",
+      icons: "stLogo.jpg",
       role: "Incoming Software Engineering Intern",
       date: "May 2025 - Present",
       description: [
@@ -65,7 +65,7 @@ export default function Home() {
       ]
     },
     "UVA DS":{
-      icon: "uvaIcon.png",
+      icons: "uvaIcon.png",
       role: "Undergraduate Research Intern",
       date: "Jan. 2025 - Present",
       description: [
@@ -78,7 +78,7 @@ export default function Home() {
       ]
     },
     "UVA Engineering":{
-      icon: "uvaEngrLogo.png",
+      icons: "uvaEngrLogo.png",
       role: "CS 2130 Teaching Assistant",
       date: "Jan. 2025 - Present",
       description: [
@@ -89,6 +89,8 @@ export default function Home() {
       ]
     }
   }
+
+  const [expName, setExpName] = useState("ST Engineering IDirect");
 
   return (
     // add the navbar component here - or add it in the layout page.
@@ -140,7 +142,7 @@ export default function Home() {
                 <CardHeader>
                   <CardTitle>
                     <div className = "flex flex-row gap-2 items-center">
-                      <img className = "w-12 h-12" src = {myExperience[expName].icon} alt = "..."></img>
+                      <img className = "w-12 h-12" src = {myExperience[expName].icons} alt = "..."></img>
                       <div className = "text-lg">
                         {myExperience[expName].role}
                          <CardDescription className = "text-base">{expName}</CardDescription>
