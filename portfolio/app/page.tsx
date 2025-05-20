@@ -18,10 +18,11 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import { setupIntersectionAnimations } from "../app/animateIfInView"
 import { ContactForm } from "./contactForm";
+import { array } from "zod";
 
 
 
@@ -36,6 +37,8 @@ export default function Home() {
     setupIntersectionAnimations();
   }, []);
 
+  const [expName, setExpName] = useState("ST Engineering");
+
   
   const mySkills = [ 
     {name: "Python", icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg'},
@@ -48,6 +51,44 @@ export default function Home() {
     {name: "Tensorflow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg"}
 
   ];
+
+  const myExperience = {
+    "ST Engineering":{
+      icon: "stLogo.jpg",
+      role: "Incoming Software Engineering Intern",
+      date: "May 2025 - Present",
+      description: [
+        "• Summer Software Engineering Intern on the DevOps team.",
+      ],
+      skillIconList: [
+        mySkills[0].icon, mySkills[2].icon, mySkills[3].icon
+      ]
+    },
+    "UVA DS":{
+      icon: "uvaIcon.png",
+      role: "Undergraduate Research Intern",
+      date: "Jan. 2025 - Present",
+      description: [
+        "• Develop a visual analytics platform using Python and SQL to analyze multi-modal neuroscience datasets.",
+        "• Support early diagnosis and treatment strategies for cognitive disorders through deep learning architectures.",
+        "• Optimize model accuracy and provide an intuitive user interface for data exploration."
+      ],
+      skillIconList: [
+        mySkills[0].icon, mySkills[6].icon, mySkills[7].icon
+      ]
+    },
+    "UVA Engineering":{
+      icon: "uvaEngrLogo.png",
+      role: "CS 2130 Teaching Assistant",
+      date: "Jan. 2025 - Present",
+      description: [
+        "• Teaching Assistant for CS 2130 - Computer Systems & Organization I"
+      ],
+      skillIconList: [
+        mySkills[0].icon, mySkills[5].icon
+      ]
+    }
+  }
 
   return (
     // add the navbar component here - or add it in the layout page.
@@ -81,7 +122,49 @@ export default function Home() {
         <div className = "text-4xl text-center">
           <p>Experience</p>
         </div>
-        <div className = "flex flex-col experiences animate justify-center mt-10 p-15 md:p-10 sm:p-5 mx-auto">
+        <div className = "mt-5 p-15 md:p-10 sm:p-5">
+          <div className = "flex flex-col md:flex-row justify-center items-start md:gap-25">
+            {/** button row */}
+            <div className = "flex flex-row md:flex-col mx-auto">
+              {Object.keys(myExperience).map(exp => (
+                <button 
+                key={exp} 
+                className = {`text-start p-5 md:p-8 font-normal transform transition duration-200
+                  ${expName == exp ? `bg-black/50 text-rose-400`:`hover:bg-black/30`}`}
+                onClick={() => setExpName(exp)}
+                >{exp}</button>
+              ))}
+            </div>
+            <div className = "w-full lg:max-w-4xl">
+              <Card className = "bg-transparent border-0 shadow-none mx-auto mt-10 md:mt-0">
+                <CardHeader>
+                  <CardTitle>
+                    <div className = "flex flex-row gap-2 items-center">
+                      <img className = "w-12 h-12" src = {myExperience[expName].icon} alt = "..."></img>
+                      <div className = "text-lg">
+                        {myExperience[expName].role}
+                         <CardDescription className = "text-base">{expName}</CardDescription>
+                      </div>
+                    </div>
+                  </CardTitle>
+              </CardHeader>
+              <CardContent>
+                  <ul className = "font-normal text-md">
+                    {myExperience[expName].description.map((des, index) => (
+                      <li key = {index} className = "p-2 text-md">{des}</li>
+                    ))}
+                  </ul>
+                  <div className = "place-content-start flex flex-row mt-5">
+                      {myExperience[expName].skillIconList.map((icon, index) =>(
+                        <img src = {icon} className="w-10 h-10 ms-3 p-2 border-1 rounded-md bg-black/40" key = {index}></img>
+                      ))}
+                  </div>
+              </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+        {/* <div className = "flex flex-col experiences animate justify-center mt-10 p-15 md:p-10 sm:p-5 mx-auto">
           <Card className = "w-full mx-auto mb-5 bg-transparent border-2 transform transition duration-300 hover:bg-black/30">
             <CardHeader>
               <CardTitle>
@@ -154,7 +237,7 @@ export default function Home() {
                 </div>
             </CardContent>
           </Card>
-        </div>
+        </div> */}
       </section>
 
       <section id = "projects" className = "py-30 grid place-items-center p-15 md:p-10 sm:p-5 experiences animate scroll-mt-20">
