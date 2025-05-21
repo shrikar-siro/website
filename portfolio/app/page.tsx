@@ -23,6 +23,7 @@ import { useEffect, useState } from "react";
 import { setupIntersectionAnimations } from "../app/animateIfInView"
 import { ContactForm } from "./contactForm";
 import { array } from "zod";
+import { motion } from "motion/react"
 
 
 
@@ -137,7 +138,12 @@ export default function Home() {
                 >{exp}</button>
               ))}
             </div>
-            <div className = "w-full lg:max-w-4xl">
+            <motion.div 
+            key={expName}
+            initial={{opacity:0}}
+            animate={{opacity:1}}
+            transition={{duration:1.5}}
+            className = "w-full lg:max-w-4xl">
               <Card className = "bg-transparent border-0 shadow-none mx-auto mt-10 md:mt-0">
                 <CardHeader>
                   <CardTitle>
@@ -163,7 +169,7 @@ export default function Home() {
                   </div>
               </CardContent>
               </Card>
-            </div>
+            </motion.div>
           </div>
         </div>
         {/* <div className = "flex flex-col experiences animate justify-center mt-10 p-15 md:p-10 sm:p-5 mx-auto">
