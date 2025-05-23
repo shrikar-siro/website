@@ -7,6 +7,9 @@ import { FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/comp
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
+import emailjs from '@emailjs/browser'
+import { useRef } from "react"
+
 
 const formSchema = z.object({
     //add the form fields here.
@@ -21,7 +24,10 @@ const formSchema = z.object({
     message: z.string()
 })
 
+
 export function ContactForm(){
+    const formRef= useRef<HTMLFormElement>(null);
+
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         // need to provide deafult values for form fields
@@ -33,11 +39,36 @@ export function ContactForm(){
         }
     })
 
+    const sendEmail = (data: z.infer<typeof formSchema>) => {
+        
+        const serviceID: string = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? "";
+        const templateID: string = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? "";
+        const publicKey: string = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ?? "";
+        if(formRef.current){
+            emailjs
+            .sendForm(serviceID, templateID, formRef.current, {
+                publicKey: publicKey,
+            })
+            .then(
+                () => {
+                console.log('SUCCESS!');
+                },
+                (error) => {
+                console.log('FAILED...', error.text);
+                },
+            );
+        }
+        else{
+            console.log("form ref does not work here.");
+        }
+    };
+
+
     return(
         <>
             <div className = "flex items-center justify-center mx-auto p-6 border-1 rounded-lg shadow-md bg-black/20">
                 <FormProvider {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className = "space-y-8 w-full">
+                    <form ref={formRef} onSubmit={form.handleSubmit(sendEmail)} className = "space-y-8 w-full">
                         <FormField 
                             control = {form.control} 
                             name="full_name"
@@ -58,7 +89,7 @@ export function ContactForm(){
                                 <FormItem>
                                     <FormLabel>Email</FormLabel>
                                     <FormControl>
-                                        <Input placeholder="example@gmail.com" className = "w-full" {...field} />
+                                        <Input placeholder="example@gmail.com" className = "input-field w-full" {...field} />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
@@ -88,5 +119,7 @@ export function ContactForm(){
 // submit handler for form.
 function onSubmit(values: z.infer<typeof formSchema>){
     // type-safe.
+    // program email.js here.
+    alert("The message has been sent!");
     console.log(values);
 }

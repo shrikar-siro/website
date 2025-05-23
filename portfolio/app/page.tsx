@@ -132,7 +132,7 @@ export default function Home() {
               {Object.keys(myExperience).map(exp => (
                 <button 
                 key={exp} 
-                className = {`text-start p-5 md:p-8 font-normal transform transition duration-200
+                className = {`text-start p-5 md:p-8 font-normal transform transition duration-200 text-md
                   ${expName == exp ? `bg-black/50 text-rose-400`:`hover:bg-black/30`}`}
                 onClick={() => setExpName(exp)}
                 >{exp}</button>
@@ -143,13 +143,13 @@ export default function Home() {
             initial={{opacity:0}}
             animate={{opacity:1}}
             transition={{duration:1.5}}
-            className = "w-full lg:max-w-4xl">
-              <Card className = "bg-transparent border-0 shadow-none mx-auto mt-10 md:mt-0">
+            className = "w-full max-w-4xl">
+              <Card className = "bg-transparent border-0 shadow-none mx-auto mt-8 md:mt-0">
                 <CardHeader>
                   <CardTitle>
                     <div className = "flex flex-row gap-2 items-center">
-                      <img className = "w-12 h-12" src = {myExperience[expName].icons} alt = "..."></img>
-                      <div className = "text-lg">
+                      <img className = "w-11 h-11 lg:w-12 lg:h-12" src = {myExperience[expName].icons} alt = "..."></img>
+                      <div className = "text-lg md:text-base">
                         {myExperience[expName].role}
                          <CardDescription className = "text-base">{expName}</CardDescription>
                       </div>
@@ -163,6 +163,10 @@ export default function Home() {
                     ))}
                   </ul>
                   <div className = "place-content-start flex flex-row mt-5">
+                      
+                      <div className = "items-center">
+                         <h2 className = "text-md font-semibold p-2">Skills:</h2>
+                      </div>
                       {myExperience[expName].skillIconList.map((icon, index) =>(
                         <img src = {icon} className="w-10 h-10 ms-3 p-2 border-1 rounded-md bg-black/40" key = {index}></img>
                       ))}
