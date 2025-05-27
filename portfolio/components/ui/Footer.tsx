@@ -17,12 +17,12 @@ export default function Footer() {
                   </div>
                 </li>
                 <li>
-                  <div className="w-12 h-12 flex items-center justify-center border-1 rounded-full p-3 text-gray-400 transform transition-colors duration-200 hover:bg-gradient-to-r hover:from-blue-500 hover:to-indigo-500 hover:text-transparent hover:bg-clip-text hover:bg-black/30 hover:border-2">
-                    <i className="fa-brands fa-tiktok text-2xl visible"></i>
+                  <div className="w-12 h-12 flex items-center justify-center border-1 rounded-full p-3 text-gray-400 transform transition-colors duration-200 hover:text-indigo-600 hover:bg-black/30 hover:border-2">
+                    <i className="fa-brands fa-tiktok text-2xl"></i>
                   </div>
                 </li>
                 <li>
-                  <div className="w-12 h-12 flex items-center justify-center border-1 rounded-full p-3 text-gray-400 transform transition duration-200 hover:text-yellow-400 hover:bg-black/30 hover:border-2">
+                  <div className="w-12 h-12 flex items-center justify-center border-1 rounded-full p-3 text-gray-400 transform transition duration-200 hover:text-yellow-500 hover:bg-black/30 hover:border-2">
                     <i className="fa-brands fa-snapchat text-2xl"></i>
                   </div>
                 </li>
