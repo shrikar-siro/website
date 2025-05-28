@@ -73,7 +73,12 @@ export default function Home() {
       role: "Incoming Software Engineering Intern",
       date: "May 2025 - Present",
       description: ["• Summer Software Engineering Intern on the DevOps team."],
-      skillIconList: [mySkills[0].icon, mySkills[2].icon, mySkills[3].icon],
+      skillIconList: [
+        mySkills[0].icon,
+        mySkills[1].icon,
+        mySkills[2].icon,
+        mySkills[3].icon,
+      ],
       link: "https://www.idirect.net",
     },
     "UVA DS": {
@@ -100,6 +105,30 @@ export default function Home() {
     },
   };
 
+  const myProjects = [
+    {
+      name: "LaLiga Insights",
+      img: "laLigaInsights.png",
+      description:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ipsum similique, nisi, maiores ipsam natus reiciendis consequuntur alias est atque.",
+      skills: [mySkills[0].icon],
+    },
+    {
+      name: "Lung Cancer Classifier",
+      img: "LungCancerClassifier.png",
+      description:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ipsum similique, nisi, maiores ipsam natus reiciendis consequuntur alias est atque iste sequi beatae fugiat reprehenderit quis quo repudiandae neque earum.",
+      skills: [mySkills[0].icon, mySkills[7].icon],
+    },
+    {
+      name: "TopTunes",
+      img: "TopTunes.png",
+      description:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ipsum similique, nisi, maiores ipsam natus reiciendis consequuntur alias est atque iste sequi beatae fugiat reprehenderit quis quo repudiandae neque earum.",
+      skills: [mySkills[2].icon, mySkills[4].icon],
+    },
+  ];
+
   const [expName, setExpName] = useState("ST Engineering IDirect");
   const arrowSymbol = "\u2197";
 
@@ -107,9 +136,9 @@ export default function Home() {
     // add the navbar component here - or add it in the layout page.
     <>
       <section id="first">
-        <div className="text-5xl md:text-6xl lg:text-7xl font-semibold mt-50 text-center fade-in">
+        <div className="text-6xl md:text-7xl lg:text-8xl font-semibold mt-50 text-center fade-in">
           <div className="text-container">
-            <p className="text-to-animate bg-gradient-to-r from-blue-500 to-white text-transparent bg-clip-text inline-block">
+            <p className="text-to-animate bg-gradient-to-r from-blue-500 to-white text-transparent bg-clip-text inline-block animate">
               Hey. I'm Shrikar.
             </p>
           </div>
@@ -144,7 +173,7 @@ export default function Home() {
 
       <section
         id="experience"
-        className="place-content-center font-bold mb-40 scroll-mt-20"
+        className="place-content-center font-bold mb-40 scroll-mt-30 fadeIn animate"
       >
         <div className="text-4xl text-center">
           <p>Experience</p>
@@ -225,88 +254,14 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
-        {/* <div className = "flex flex-col experiences animate justify-center mt-10 p-15 md:p-10 sm:p-5 mx-auto">
-          <Card className = "w-full mx-auto mb-5 bg-transparent border-2 transform transition duration-300 hover:bg-black/30">
-            <CardHeader>
-              <CardTitle>
-                <div className = "flex flex-row gap-2 items-center">
-                  <img className = "w-10 h-10" src = "stLogo.jpg" alt = "..."></img>
-                  <div className = "text-lg">
-                    Incoming Software Engineering Intern
-                    <CardDescription>ST Engineering</CardDescription>
-                  </div>
-                </div>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-                <ul className = "font-normal text-md">
-                  <li>• Summer Software Engineering Intern on the DevOps team.</li>
-                </ul>
-                <div className = "place-content-start flex flex-row mt-5">
-                    <img src = {mySkills[0].icon} alt="Python" className="w-10 h-10 ms-3 p-2 border-1 rounded-md bg-black/40"></img>
-                    <img src = {mySkills[2].icon} alt="Python" className="w-10 h-10 ms-3 p-2 border-1 rounded-md bg-black/40"></img>
-                    <img src = {mySkills[3].icon} alt="Python" className="w-10 h-10 ms-3 p-2 border-1 rounded-md bg-black/40"></img>
-                </div>
-            </CardContent>
-          </Card>
-          <Card className = " w-full mx-auto mb-5 bg-transparent border-2 transform transition duration-300 hover:bg-black/30">
-            <CardHeader>
-              <CardTitle>
-                <div className = "flex flex-row gap-2 items-center">
-                  <img className = "w-10 h-10" src = "uvaIcon.png" alt = "..."></img>
-                  <div className = "text-lg">
-                    Undergraduate Research Intern
-                    <CardDescription>UVA School of Data Science</CardDescription>
-                  </div>
-                </div>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-                <ul className = "font-normal text-md mb-3">
-                  <li>• Develop a visual analytics platform using Python and SQL to analyze multi-modal neuroscience datasets.</li>
-                  <li>• Support early diagnosis and treatment strategies for cognitive disorders through deep learning architectures.</li>
-                  <li>• Optimize model accuracy and provide an intuitive user interface for data exploration.</li>
-                </ul>
-                
-                <div className = "place-content-start flex flex-row mt-5">
-                    <img src = {mySkills[0].icon} alt="Python" className="w-10 h-10 ms-3 p-2 border-1 rounded-md bg-black/40"></img>
-                    <img src = {mySkills[6].icon} alt="Python" className="w-10 h-10 ms-3 p-2 border-1 rounded-md bg-black/40"></img>
-                    <img src = {mySkills[7].icon} alt="Python" className="w-10 h-10 ms-3 p-2 border-1 rounded-md bg-black/40"></img>
-                </div>
-            </CardContent>
-          </Card>
-          <Card className = "w-full mx-auto mb-5 bg-transparent border-2 transform transition duration-300  hover:bg-black/30">
-            <CardHeader>
-          
-              <CardTitle>
-                <div className = "flex flex-row gap-2 items-center">
-                  <img className = "w-10 h-10" src = "uvaEngrLogo.png" alt = "..."></img>
-                  <div className = "text-lg">
-                    Undergraduate Teaching Assistant
-                    <CardDescription>UVA School of Engineering</CardDescription>
-                  </div>
-                </div>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-                <ul className = "font-normal text-base">
-                  <li>• Teaching Assistant for CS 2130 - Computer Systems & Organization I</li>
-                </ul>
-                <div className = "place-content-start flex flex-row mt-5">
-                    <img src = {mySkills[0].icon} alt="Python" className="w-10 h-10 ms-3 p-2 border-1 rounded-md bg-black/40"></img>
-                    <img src = {mySkills[5].icon} alt="Python" className="w-10 h-10 ms-3 p-2 border-1 rounded-md bg-black/40"></img>
-                </div>
-            </CardContent>
-          </Card>
-        </div> */}
       </section>
 
       <section
         id="projects"
-        className="py-30 grid place-items-center p-15 md:p-10 sm:p-5 experiences animate scroll-mt-20"
+        className="py-30 grid place-items-center p-10 md:p-10 sm:p-5 fadeIn animate scroll-mt-20"
       >
-        <div className="flex flex-col lg:flex-row items-center justify-center lg:gap-30">
-          <div className="flex-grow">
+        <div className="flex flex-col lg:flex-row items-center justify-center lg:gap-30 w-full">
+          <div className="flex flex-col max-w-2xl">
             <p className="text-4xl font-bold mb-4 fade-in text-center">
               Projects
             </p>
@@ -316,7 +271,7 @@ export default function Home() {
               GitHub Repo.
             </p>
           </div>
-          <div className="mt-5 md:mt-5 sm:mt-5 p-5 md:p-0">
+          <div className="mt-5 md:mt-5 p-3 md:p-0 max-w-6xl">
             <Carousel
               opts={{
                 align: "start",
@@ -325,77 +280,44 @@ export default function Home() {
               orientation="horizontal"
             >
               <CarouselContent>
-                <CarouselItem className="md:basis-1/2 lg:basis-1/1 flex items-stretch w-full">
-                  <div className="flex flex-col justify-center border-2 border-opacity-60 rounded-md overflow-hidden transform transition duration-150 hover:bg-black/30">
-                    <img
-                      src="laLigaInsights.png"
-                      className="w-full h-[300px] object-cover object-center"
-                    ></img>
-                    <div className="lg:p-6 p-4 md:p-3 hidden md:block flex-grow text-center">
-                      <h1 className="text-lg font-semibold mb-3 text-center">
-                        LaLiga Insights
-                      </h1>
-                      <p className="lg:text-base md:text-sm mx-auto leading-relaxed mb-2">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Nam ipsum similique, nisi, maiores ipsam natus
-                        reiciendis consequuntur alias est atque.
-                      </p>
-                    </div>
-                    <div className="flex flex-row justify-between place-content-end p-3">
-                      <div className="items-center">
-                        <h2 className="text-md font-semibold p-2">
-                          Skills Used:
-                        </h2>
+                {myProjects.map((project, index) => (
+                  <CarouselItem
+                    key={index}
+                    className="md:basis-1/2 lg:basis-1/1 flex items-stretch"
+                  >
+                    <div className="flex flex-col justify-center border-2 border-opacity-60 rounded-md overflow-hidden transform transition duration-150 hover:bg-black/30">
+                      <img
+                        src={project.img}
+                        className="w-full h-[325px] object-cover object-center"
+                      ></img>
+                      <div className="lg:p-6 p-4 md:p-3 hidden md:block flex-grow text-center">
+                        <h1 className="text-lg font-semibold mb-3 text-center">
+                          {project.name}
+                        </h1>
+                        <p className="lg:text-base md:text-sm mx-auto leading-relaxed mb-2">
+                          {project.description}
+                        </p>
                       </div>
-                      <div className="flex flex-row">
-                        <img
-                          src={mySkills[0].icon}
-                          alt="Python"
-                          className="w-10 h-10 ms-3 p-2 border-1 rounded-md bg-black/40"
-                        ></img>
-                      </div>
-                    </div>
-                  </div>
-                </CarouselItem>
-                <CarouselItem className="md:basis-1/2 lg:basis-1/1 flex items-stretch">
-                  <div className="flex flex-col justify-center border-2 border-opacity-60 rounded-md overflow-hidden transform transition duration-150 hover:bg-black/30">
-                    <img
-                      src="LungCancerClassifier.png"
-                      className="w-full h-[300px] object-cover object-center"
-                    ></img>
-                    <div className="lg:p-6 p-4 md:p-3 hidden md:block flex-grow text-center">
-                      <h1 className="text-lg font-semibold mb-3 text-center mb-2">
-                        Lung Cancer Classifier
-                      </h1>
-                      <p className="lg:text-base md:text-sm mx-auto leading-relaxed mb-auto">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Nam ipsum similique, nisi, maiores ipsam natus
-                        reiciendis consequuntur alias est atque iste sequi
-                        beatae fugiat reprehenderit quis quo repudiandae neque
-                        earum.
-                      </p>
-                    </div>
-                    <div className="flex flex-row justify-between place-content-end p-3">
-                      <div className="items-center">
-                        <h2 className="text-md font-semibold p-2">
-                          Skills Used:
-                        </h2>
-                      </div>
-                      <div className="flex flex-row">
-                        <img
-                          src={mySkills[0].icon}
-                          alt="Python"
-                          className="w-10 h-10 ms-3 p-2 border-1 rounded-md bg-black/40"
-                        ></img>
-                        <img
-                          src={mySkills[7].icon}
-                          alt="Python"
-                          className="w-10 h-10 ms-3 p-2 border-1 rounded-md bg-black/40"
-                        ></img>
+                      <div className="flex flex-row justify-between place-content-end p-3">
+                        <div className="items-center">
+                          <h2 className="text-md font-semibold p-2">
+                            Skills Used:
+                          </h2>
+                        </div>
+                        <div className="flex flex-row">
+                          {project.skills.map((skill, skillIndex) => (
+                            <img
+                              key={skillIndex}
+                              src={skill}
+                              alt={`Skill ${skillIndex}`}
+                              className="w-10 h-10 ms-3 p-2 border-1 rounded-md bg-black/40"
+                            />
+                          ))}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </CarouselItem>
+                  </CarouselItem>
+                ))}
               </CarouselContent>
               <CarouselPrevious />
               <CarouselNext />
@@ -404,10 +326,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="skills" className="py-40 place-content-center -scroll-mt-10">
+      <section
+        id="skills"
+        className="py-40 place-content-center -scroll-mt-10 fadeIn animate"
+      >
         <div className="text-4xl fade-in text-center font-bold">Skills</div>
         {/*grid of cards with each skill pulled from list above.*/}
-        <div className="mx-auto mt-5 p-15 md:p-10 sm:p-10 grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-4 experiences animate">
+        <div className="mx-auto mt-5 p-15 md:p-10 sm:p-10 grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-4">
           {mySkills.map((item, index) => (
             <div
               key={index}
@@ -421,12 +346,15 @@ export default function Home() {
       </section>
 
       {/** contact secction. form for form*/}
-      <section id="contact">
+      <section id="contact" className="fadeIn animate scroll-mt-20 mb-10">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-15 lg:gap-20 p-15 md:p-10 sm:p-5 mx-auto">
           <div className="flex-grow max-w-3xl text-4xl fade-in text-center font-bold mb-5 sm:mb-5">
             Contact Me
+            <p className="text-xl mt-5 font-normal">
+              Like what you see? Let's talk!
+            </p>
           </div>
-          <div className="w-full lg:max-w-2xl mx-auto justify-center items-center p-5 md:p-0 experiences animate">
+          <div className="w-full lg:max-w-2xl mx-auto justify-center items-center md:p-0">
             <ContactForm />
           </div>
         </div>

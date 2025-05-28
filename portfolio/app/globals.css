@@ -174,8 +174,11 @@
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
-  animation: typing 1s steps(16), cursor 0.4s step-end infinite alternate;
   border-right: none;
+}
+
+.text-to-animate.in-view {
+  animation: typing 1s steps(16), cursor 0.4s step-end infinite alternate;
 }
 
 /*blinking cursor animation*/
@@ -208,7 +211,7 @@
   background-color: #f8f8f8; /* fallback background */
 }
 
-.experiences.in-view {
+.fadeIn.in-view {
   animation: fade-in 2.5s ease;
 }
 
