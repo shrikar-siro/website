@@ -26,6 +26,15 @@ import Footer from "../components/ui/Footer";
 import { array } from "zod";
 import { motion } from "motion/react";
 
+type ExperienceItem = {
+  icons: string;
+  role: string;
+  date: string;
+  description: string[];
+  skillIconList: string[];
+  link: string;
+};
+
 export default function Home() {
   // made the script runnable, so now we can use useEffect to call the setup function.
   useEffect(() => {
@@ -67,7 +76,7 @@ export default function Home() {
     },
   ];
 
-  const myExperience = {
+  const myExperience: { [key: string]: ExperienceItem } = {
     "ST Engineering IDirect": {
       icons: "stLogo.jpg",
       role: "Incoming Software Engineering Intern",
@@ -110,22 +119,25 @@ export default function Home() {
       name: "LaLiga Insights",
       img: "laLigaInsights.png",
       description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ipsum similique, nisi, maiores ipsam natus reiciendis consequuntur alias est atque.",
+        "I deployed a Streamlit web app to analyze over 4,000 player statistics from the 2023–2024 LaLiga season. The project features data cleaning & transformation using Pandas and NumPy, and enables users to explore the dataset through interactive graphs and charts.",
       skills: [mySkills[0].icon],
+      link: "https://laliga-insights-8vfzplncwqkmzfzczkbjsz.streamlit.app",
     },
     {
       name: "Lung Cancer Classifier",
       img: "LungCancerClassifier.png",
       description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ipsum similique, nisi, maiores ipsam natus reiciendis consequuntur alias est atque iste sequi beatae fugiat reprehenderit quis quo repudiandae neque earum.",
-      skills: [mySkills[0].icon, mySkills[7].icon],
+        "I engineered a web application using YOLOv8 to detect the presence and proportion of lung cancer in chest X-ray images. Leveraging PyTorch and TensorFlow, the model achieved 95% accuracy on a dataset with over 1,000 images. Users can upload images and view real-time model predictions.",
+      skills: [mySkills[0].icon, mySkills[6].icon, mySkills[7].icon],
+      link: "https://lung-cancer-classifier-4fxehcwubeuga3qsrtgxyi.streamlit.app",
     },
     {
       name: "TopTunes",
       img: "TopTunes.png",
       description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ipsum similique, nisi, maiores ipsam natus reiciendis consequuntur alias est atque iste sequi beatae fugiat reprehenderit quis quo repudiandae neque earum.",
+        "I built a web application using React, TypeScript, and vanilla JavaScript integrating with the Spotify API to let users search for any artist and view their top 10 songs ranked by popularity. Each track includes detailed metadata—such as release date, collaborating artists, and popularity score.",
       skills: [mySkills[2].icon, mySkills[4].icon],
+      link: "https://modify-njjv.vercel.app",
     },
   ];
 
@@ -162,10 +174,14 @@ export default function Home() {
               </p>
             </div>
             <p className="fade-in text-2xl text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
-              dolor quia sed labore deleniti architecto illum provident saepe
-              esse, necessitatibus ipsum ipsa itaque deserunt sit ex consectetur
-              cupiditate incidunt iure.
+              I'm currently a 3rd year CS major at the University of Virginia
+              (UVA) and a Software Engineering Intern at ST Engineering IDirect.
+              <br />
+              <br />
+              When I'm not coding, you can find me watching sports, reading tech
+              articles, or hitting serves at the local tennis court. I'm always
+              looking for opportunities to learn new technologies, build cool
+              projects, and grow with others.
             </p>
           </div>
         </div>
@@ -266,9 +282,9 @@ export default function Home() {
               Projects
             </p>
             <p className="fade-in text-center text-xl">
-              Here are some of my projects. Feel free to look around! For more
-              information about each project, click on the card to visit its
-              GitHub Repo.
+              Here are some of my projects. You can either click on the image to
+              visit the deployed project, or the card's title to view the source
+              code. Feel free to play around, and enjoy!
             </p>
           </div>
           <div className="mt-5 md:mt-5 p-10 sm:p-5 md:p-0 max-w-5xl lg:basis-7xl">
