@@ -258,10 +258,10 @@ export default function Home() {
 
       <section
         id="projects"
-        className="py-30 grid place-items-center p-10 md:p-10 sm:p-5 fadeIn animate scroll-mt-20"
+        className="py-30 flex items-center justify-center p-10 md:p-10 sm:p-5 fadeIn animate scroll-mt-20"
       >
         <div className="flex flex-col lg:flex-row items-center justify-center lg:gap-30 w-full">
-          <div className="flex flex-col max-w-2xl">
+          <div className="flex flex-col max-w-2xl lg:basis-3xl">
             <p className="text-4xl font-bold mb-4 fade-in text-center">
               Projects
             </p>
@@ -271,7 +271,7 @@ export default function Home() {
               GitHub Repo.
             </p>
           </div>
-          <div className="mt-5 md:mt-5 p-3 md:p-0 max-w-6xl">
+          <div className="mt-5 md:mt-5 p-10 sm:p-5 md:p-0 max-w-5xl lg:basis-7xl">
             <Carousel
               opts={{
                 align: "start",
