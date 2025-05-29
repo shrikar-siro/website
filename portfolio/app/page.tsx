@@ -122,6 +122,7 @@ export default function Home() {
         "I deployed a Streamlit web app to analyze over 4,000 player statistics from the 2023–2024 LaLiga season. The project features data cleaning & transformation using Pandas and NumPy, and enables users to explore the dataset through interactive graphs and charts.",
       skills: [mySkills[0].icon],
       link: "https://laliga-insights-8vfzplncwqkmzfzczkbjsz.streamlit.app",
+      gitHubLink: "https://github.com/shrikar-siro/LaLiga-Insights",
     },
     {
       name: "Lung Cancer Classifier",
@@ -130,6 +131,7 @@ export default function Home() {
         "I engineered a web application using YOLOv8 to detect the presence and proportion of lung cancer in chest X-ray images. Leveraging PyTorch and TensorFlow, the model achieved 95% accuracy on a dataset with over 1,000 images. Users can upload images and view real-time model predictions.",
       skills: [mySkills[0].icon, mySkills[6].icon, mySkills[7].icon],
       link: "https://lung-cancer-classifier-4fxehcwubeuga3qsrtgxyi.streamlit.app",
+      gitHubLink: "https://github.com/shrikar-siro/Lung-Cancer-Detection-Repo",
     },
     {
       name: "TopTunes",
@@ -138,6 +140,7 @@ export default function Home() {
         "I built a web application using React, TypeScript, and vanilla JavaScript integrating with the Spotify API to let users search for any artist and view their top 10 songs ranked by popularity. Each track includes detailed metadata—such as release date, collaborating artists, and popularity score.",
       skills: [mySkills[2].icon, mySkills[4].icon],
       link: "https://modify-njjv.vercel.app",
+      gitHubLink: "https://github.com/shrikar-siro/Modify",
     },
   ];
 
@@ -283,8 +286,8 @@ export default function Home() {
             </p>
             <p className="fade-in text-center text-xl">
               Here are some of my projects. You can either click on the image to
-              visit the deployed project, or the card's title to view the source
-              code. Feel free to play around, and enjoy!
+              visit the deployed project, or the card title's floating arrow to
+              view the source code. Feel free to play around, and enjoy!
             </p>
           </div>
           <div className="mt-5 md:mt-5 p-10 sm:p-5 md:p-0 max-w-5xl lg:basis-7xl">
@@ -301,14 +304,23 @@ export default function Home() {
                     key={index}
                     className="md:basis-1/2 lg:basis-1/1 flex items-stretch"
                   >
-                    <div className="flex flex-col justify-center border-2 border-opacity-60 rounded-md overflow-hidden transform transition duration-150 hover:bg-black/30">
-                      <img
-                        src={project.img}
-                        className="w-full h-[325px] object-cover object-center"
-                      ></img>
+                    <div className="flex flex-col justify-center border-2 border-opacity-60 rounded-md overflow-hidden">
+                      <a href={project.link} target="_blank">
+                        <img
+                          src={project.img}
+                          className="w-full h-[325px] object-cover object-center transform transition duration-150 hover:opacity-80"
+                        ></img>
+                      </a>
                       <div className="lg:p-6 p-4 md:p-3 hidden md:block flex-grow text-center">
-                        <h1 className="text-lg font-semibold mb-3 text-center">
-                          {project.name}
+                        <h1 className="text-lg font-semibold mb-3 text-center CardDescription transform transition duration-200 hover:text-rose-500">
+                          {project.name}{" "}
+                          <a
+                            className="arrow"
+                            href={project.gitHubLink}
+                            target="_blank"
+                          >
+                            {arrowSymbol}
+                          </a>
                         </h1>
                         <p className="lg:text-base md:text-sm mx-auto leading-relaxed mb-2">
                           {project.description}
