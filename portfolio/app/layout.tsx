@@ -17,6 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/profile.jpeg",
+  },
   title: "Shrikar's Portfolio",
   description: "Made w/ Love lol",
 };

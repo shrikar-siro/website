@@ -160,7 +160,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="py-35 place-content-center -scroll-mt-20">
+      <section id="about" className="py-55 place-content-center scroll-mt-10">
         {/** have a big div as the container div, and 2 children divs. */}
         <div className="lg:flex lg:gap-20 items-start p-15 md:p-10 sm:p-5 mx-auto">
           <div className="flex flex-shrink-0 justify-center">
@@ -176,11 +176,9 @@ export default function Home() {
                 About Me
               </p>
             </div>
-            <p className="fade-in text-2xl text-center">
+            <p className="fade-in text-lg md:text-xl lg:text-2xl text-center mt-5">
               I'm currently a 3rd year CS major at the University of Virginia
               (UVA) and a Software Engineering Intern at ST Engineering IDirect.
-              <br />
-              <br />
               When I'm not coding, you can find me watching sports, reading tech
               articles, or hitting serves at the local tennis court. I'm always
               looking for opportunities to learn new technologies, build cool
@@ -192,7 +190,7 @@ export default function Home() {
 
       <section
         id="experience"
-        className="place-content-center font-bold mb-40 scroll-mt-30 fadeIn animate"
+        className="py-50 place-content-center font-bold scroll-mt-30 fadeIn animate"
       >
         <div className="text-4xl text-center">
           <p>Experience</p>
@@ -223,7 +221,7 @@ export default function Home() {
               transition={{ duration: 1.5 }}
               className="w-full max-w-4xl"
             >
-              <Card className="bg-transparent border-0 shadow-none mx-auto mt-8 md:mt-0">
+              <Card className="bg-transparent border-0 shadow-none mx-auto mt-8 md:mt-0 pb-40">
                 <CardHeader>
                   <CardTitle>
                     <div className="flex flex-row gap-2 items-center">
@@ -251,7 +249,7 @@ export default function Home() {
                 <CardContent>
                   <ul className="font-normal text-md">
                     {myExperience[expName].description.map((des, index) => (
-                      <li key={index} className="p-2 text-md">
+                      <li key={index} className="p-2 text-lg">
                         {des}
                       </li>
                     ))}
@@ -277,7 +275,7 @@ export default function Home() {
 
       <section
         id="projects"
-        className="py-30 flex items-center justify-center p-10 md:p-10 sm:p-5 fadeIn animate scroll-mt-20"
+        className="py-50 mt-30 flex items-center justify-center p-10 md:p-10 sm:p-5 fadeIn animate scroll-mt-50"
       >
         <div className="flex flex-col lg:flex-row items-center justify-center lg:gap-30 w-full">
           <div className="flex flex-col max-w-2xl lg:basis-3xl">
@@ -354,11 +352,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        id="skills"
-        className="py-40 place-content-center -scroll-mt-10 fadeIn animate"
-      >
-        <div className="text-4xl fade-in text-center font-bold">Skills</div>
+      <section id="skills" className="py-60 mt-50 fadeIn animate scroll-mt-10">
+        <div className="text-4xl fade-in text-center font-bold mb-10">
+          Top Skills
+        </div>
         {/*grid of cards with each skill pulled from list above.*/}
         <div className="mx-auto mt-5 p-15 md:p-10 sm:p-10 grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-4">
           {mySkills.map((item, index) => (
@@ -374,8 +371,8 @@ export default function Home() {
       </section>
 
       {/** contact secction. form for form*/}
-      <section id="contact" className="fadeIn animate scroll-mt-20 mb-10">
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-15 lg:gap-20 p-15 md:p-10 sm:p-5 mx-auto">
+      <section id="contact" className="pt-50 fadeIn animate scroll-mt-20 mb-10">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-15 lg:gap-20 p-10 md:p-10 mx-auto">
           <div className="flex-grow max-w-3xl text-4xl fade-in text-center font-bold mb-5 sm:mb-5">
             Contact Me
             <p className="text-xl mt-5 font-normal">

@@ -23,11 +23,16 @@ export default function Footer() {
                     </div>
                   </li>
                 </a>
-                <li>
-                  <div className="w-12 h-12 flex items-center justify-center border-1 rounded-full p-3 text-gray-400 transform transition-colors duration-200 hover:text-rose-600 hover:bg-black/30 hover:border-2">
-                    <i className="fa-brands fa-instagram text-2xl"></i>
-                  </div>
-                </li>
+                <a
+                  href="https://www.instagram.com/shrikar_siro/"
+                  target="_blank"
+                >
+                  <li>
+                    <div className="w-12 h-12 flex items-center justify-center border-1 rounded-full p-3 text-gray-400 transform transition-colors duration-200 hover:text-rose-600 hover:bg-black/30 hover:border-2">
+                      <i className="fa-brands fa-instagram text-2xl"></i>
+                    </div>
+                  </li>
+                </a>
               </ul>
             </div>
             <p>Copyright © Shrikar Sirobhushanam 2025. All rights reserved.</p>
