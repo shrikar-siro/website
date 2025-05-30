@@ -160,7 +160,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="py-55 place-content-center scroll-mt-10">
+      <section
+        id="about"
+        className="py-30 mb-30 place-content-center scroll-mt-10"
+      >
         {/** have a big div as the container div, and 2 children divs. */}
         <div className="lg:flex lg:gap-20 items-start p-15 md:p-10 sm:p-5 mx-auto">
           <div className="flex flex-shrink-0 justify-center">
@@ -190,7 +193,7 @@ export default function Home() {
 
       <section
         id="experience"
-        className="py-50 place-content-center font-bold scroll-mt-30 fadeIn animate"
+        className="py-30 font-bold scroll-mt-30 fadeIn animate border border-red-500"
       >
         <div className="text-4xl text-center">
           <p>Experience</p>
@@ -275,7 +278,7 @@ export default function Home() {
 
       <section
         id="projects"
-        className="py-50 mt-30 flex items-center justify-center p-10 md:p-10 sm:p-5 fadeIn animate scroll-mt-50"
+        className="mt-35 py-30 flex items-center justify-center md:pt-0 p-10 fadeIn animate scroll-mt-50 border border-red-500"
       >
         <div className="flex flex-col lg:flex-row items-center justify-center lg:gap-30 w-full">
           <div className="flex flex-col max-w-2xl lg:basis-3xl">
@@ -352,7 +355,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="skills" className="py-60 mt-50 fadeIn animate scroll-mt-10">
+      <section id="skills" className="py-35 mt-30 fadeIn animate scroll-mt-10">
         <div className="text-4xl fade-in text-center font-bold mb-10">
           Top Skills
         </div>
@@ -371,7 +374,10 @@ export default function Home() {
       </section>
 
       {/** contact secction. form for form*/}
-      <section id="contact" className="pt-50 fadeIn animate scroll-mt-20 mb-10">
+      <section
+        id="contact"
+        className="mt-35 fadeIn animate scroll-mt-20 mb-10 border border-red-400"
+      >
         <div className="flex flex-col lg:flex-row items-center justify-center gap-15 lg:gap-20 p-10 md:p-10 mx-auto">
           <div className="flex-grow max-w-3xl text-4xl fade-in text-center font-bold mb-5 sm:mb-5">
             Contact Me
