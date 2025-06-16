@@ -367,28 +367,7 @@ export default function Home() {
           Top Skills
         </div>
         {/*grid of cards with each skill pulled from list above.*/}
-        {/* <div className="relative w-[400px] h-[400px] mx-auto">
-          {mySkills.map((skill, index) => {
-            const angle = (index / mySkills.length) * 2 * Math.PI;
-            const x = centerX + radius * Math.cos(angle);
-            const y = centerY + radius * Math.sin(angle);
-            return (
-              <div
-                key={skill.name}
-                className="absolute transform -translate-x-1/2 -translate-y-1/2 group"
-                style={{ top: y, left: x }}
-              >
-                <div className="w-20 h-20 bg-transparent rounded-full flex items-center justify-center text-white cursor-pointer border-1">
-                  <img src={skill.icon} className="w-auto h-auto p-5"></img>
-                </div>
-                <div className="absolute bg-black text-white p-2 rounded opacity-0 group-hover:opacity-100 transition duration-300 text-xs mt-2 z-10">
-                  {skill.name}
-                </div>
-              </div>
-            );
-          })}
-        </div> */}
-        <div className="mx-auto mt-5 p-15 md:p-10 sm:p-10 grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-4">
+        <div className="mx-auto mt-5 p-10 hidden md:grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-4">
           {mySkills.map((item, index) => (
             <div
               key={index}
@@ -399,6 +378,23 @@ export default function Home() {
             </div>
           ))}
         </div>
+        <div className="md:hidden grid grid-cols-1 gap-3 mx-auto mt-5 p-15">
+          {mySkills.map((item, index) => (
+            <div
+              key={index}
+              className="flex p-5 border-1 rounded-md transform transition duration-200 hover:border-blue-500 animate-infinite-scroll"
+            >
+              <div className="flex flex-row gap-3">
+                <div>
+                  <img className="w-12 h-12" src={item.icon} />
+                </div>
+                <div className="flex items-center justify-center">
+                  <h3 className="text-md">{item.name}</h3>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/** contact secction. form for form*/}
@@ -406,7 +402,7 @@ export default function Home() {
         id="contact"
         className="py-35 mt-45 fadeIn animate scroll-mt-20 mb-10"
       >
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-15 lg:gap-20 p-10 md:p-10 mx-auto">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-15 lg:gap-20 p-15 md:p-10 mx-auto">
           <div className="flex-grow max-w-3xl text-4xl fade-in text-center font-bold mb-5 sm:mb-5">
             Contact Me
             <p className="text-xl mt-5 font-normal">

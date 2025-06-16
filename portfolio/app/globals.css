@@ -257,3 +257,6 @@
 .CardDescription:hover .arrow {
   transform: translate(2px, -2px);
 }
+
+.animate-infinite-scroll {
+}
