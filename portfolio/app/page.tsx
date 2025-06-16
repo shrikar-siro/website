@@ -81,7 +81,9 @@ export default function Home() {
       icons: "stLogo.jpg",
       role: "Incoming Software Engineering Intern",
       date: "May 2025 - Present",
-      description: ["• Summer Software Engineering Intern on the DevOps team."],
+      description: [
+        "• Currently working as a DevSecOps Software Engineering Intern at ST Engineering iDirect, exploring CI/CD pipeline development, infrastructure as code (IaC), containerization, and secure software delivery.",
+      ],
       skillIconList: [
         mySkills[0].icon,
         mySkills[1].icon,
@@ -146,12 +148,14 @@ export default function Home() {
 
   const [expName, setExpName] = useState("ST Engineering IDirect");
   const arrowSymbol = "\u2197";
-
+  const centerX = 200,
+    centerY = 200;
+  const radius = 150;
   return (
     // add the navbar component here - or add it in the layout page.
     <>
       <section id="first">
-        <div className="text-6xl md:text-7xl lg:text-8xl font-semibold mt-50 text-center fade-in">
+        <div className="text-6xl md:text-7xl lg:text-8xl font-semibold mt-50 text-center fade-in py-30">
           <div className="text-container">
             <p className="text-to-animate bg-gradient-to-r from-blue-500 to-white text-transparent bg-clip-text inline-block animate">
               Hey. I'm Shrikar.
@@ -162,7 +166,7 @@ export default function Home() {
 
       <section
         id="about"
-        className="py-30 mb-30 place-content-center scroll-mt-10"
+        className="py-30 mb-30 place-content-center -scroll-mt-15"
       >
         {/** have a big div as the container div, and 2 children divs. */}
         <div className="lg:flex lg:gap-20 items-start p-15 md:p-10 sm:p-5 mx-auto">
@@ -179,7 +183,7 @@ export default function Home() {
                 About Me
               </p>
             </div>
-            <p className="fade-in text-lg md:text-xl lg:text-2xl text-center mt-5">
+            <p className="fade-in text-xl md:text-2xl text-center mt-5">
               I'm currently a 3rd year CS major at the University of Virginia
               (UVA) and a Software Engineering Intern at ST Engineering IDirect.
               When I'm not coding, you can find me watching sports, reading tech
@@ -193,7 +197,7 @@ export default function Home() {
 
       <section
         id="experience"
-        className="py-30 font-bold scroll-mt-30 fadeIn animate border border-red-500"
+        className="py-30 font-bold scroll-mt-20 fadeIn animate"
       >
         <div className="text-4xl text-center">
           <p>Experience</p>
@@ -227,9 +231,9 @@ export default function Home() {
               <Card className="bg-transparent border-0 shadow-none mx-auto mt-8 md:mt-0 pb-40">
                 <CardHeader>
                   <CardTitle>
-                    <div className="flex flex-row gap-2 items-center">
+                    <div className="flex flex-row gap-2 md:gap-3 items-center">
                       <img
-                        className="w-13 h-13"
+                        className="w-13 h-13 md:w-15 md:h-15"
                         src={myExperience[expName].icons}
                         alt="..."
                       ></img>
@@ -278,7 +282,7 @@ export default function Home() {
 
       <section
         id="projects"
-        className="mt-35 py-30 flex items-center justify-center md:pt-0 p-10 fadeIn animate scroll-mt-50 border border-red-500"
+        className="mt-35 py-30 flex items-center justify-center md:pt-15 p-10 fadeIn animate scroll-mt-15 md:scroll-mt-20"
       >
         <div className="flex flex-col lg:flex-row items-center justify-center lg:gap-30 w-full">
           <div className="flex flex-col max-w-2xl lg:basis-3xl">
@@ -355,11 +359,35 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="skills" className="py-35 mt-30 fadeIn animate scroll-mt-10">
+      <section
+        id="skills"
+        className="py-35 mt-30 fadeIn animate scroll-mt-10  pb-0"
+      >
         <div className="text-4xl fade-in text-center font-bold mb-10">
           Top Skills
         </div>
         {/*grid of cards with each skill pulled from list above.*/}
+        {/* <div className="relative w-[400px] h-[400px] mx-auto">
+          {mySkills.map((skill, index) => {
+            const angle = (index / mySkills.length) * 2 * Math.PI;
+            const x = centerX + radius * Math.cos(angle);
+            const y = centerY + radius * Math.sin(angle);
+            return (
+              <div
+                key={skill.name}
+                className="absolute transform -translate-x-1/2 -translate-y-1/2 group"
+                style={{ top: y, left: x }}
+              >
+                <div className="w-20 h-20 bg-transparent rounded-full flex items-center justify-center text-white cursor-pointer border-1">
+                  <img src={skill.icon} className="w-auto h-auto p-5"></img>
+                </div>
+                <div className="absolute bg-black text-white p-2 rounded opacity-0 group-hover:opacity-100 transition duration-300 text-xs mt-2 z-10">
+                  {skill.name}
+                </div>
+              </div>
+            );
+          })}
+        </div> */}
         <div className="mx-auto mt-5 p-15 md:p-10 sm:p-10 grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-4">
           {mySkills.map((item, index) => (
             <div
@@ -376,7 +404,7 @@ export default function Home() {
       {/** contact secction. form for form*/}
       <section
         id="contact"
-        className="mt-35 fadeIn animate scroll-mt-20 mb-10 border border-red-400"
+        className="py-35 mt-45 fadeIn animate scroll-mt-20 mb-10"
       >
         <div className="flex flex-col lg:flex-row items-center justify-center gap-15 lg:gap-20 p-10 md:p-10 mx-auto">
           <div className="flex-grow max-w-3xl text-4xl fade-in text-center font-bold mb-5 sm:mb-5">

@@ -1,3 +1,14 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+const linkedinIcon = (
+  <FontAwesomeIcon icon={["fab", "linkedin"]} className="text-2xl" />
+);
+const githubIcon = (
+  <FontAwesomeIcon icon={["fab", "github"]} className="text-2xl" />
+);
+const instagramIcon = (
+  <FontAwesomeIcon icon={["fab", "instagram"]} className="text-2xl" />
+);
 export default function Footer() {
   return (
     <>
@@ -11,15 +22,15 @@ export default function Footer() {
                   target="_blank"
                 >
                   <li>
-                    <div className="w-12 h-12 flex items-center justify-center border-1 rounded-full p-3 text-gray-400 transform transition duration-200 hover:text-blue-500 hover:bg-black/30 hover:border-2">
-                      <i className="fa-brands fa-linkedin text-2xl"></i>
+                    <div className="w-12 h-12 flex items-center justify-center border-1 rounded-full p-3 text-gray-400 transform transition duration-200 hover:text-blue-500 hover:bg-black/30">
+                      {linkedinIcon}
                     </div>
                   </li>
                 </a>
                 <a href="https://github.com/shrikar-siro" target="_blank">
                   <li>
-                    <div className="w-12 h-12 flex items-center justify-center border-1 rounded-full p-3 text-gray-400 transform transition duration-200 hover:text-white hover:bg-black/30 hover:border-2">
-                      <i className="fa-brands fa-github text-2xl"></i>
+                    <div className="w-12 h-12 flex items-center justify-center border-1 rounded-full p-3 text-gray-400 transform transition duration-200 hover:text-white hover:bg-black/30">
+                      {githubIcon}
                     </div>
                   </li>
                 </a>
@@ -28,8 +39,8 @@ export default function Footer() {
                   target="_blank"
                 >
                   <li>
-                    <div className="w-12 h-12 flex items-center justify-center border-1 rounded-full p-3 text-gray-400 transform transition-colors duration-200 hover:text-rose-600 hover:bg-black/30 hover:border-2">
-                      <i className="fa-brands fa-instagram text-2xl"></i>
+                    <div className="w-12 h-12 flex items-center justify-center border-1 rounded-full p-3 text-gray-400 transform transition duration-200 hover:text-rose-600 hover:bg-black/30">
+                      {instagramIcon}
                     </div>
                   </li>
                 </a>

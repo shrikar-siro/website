@@ -5,6 +5,7 @@ import "./globals.css";
 import Navbar from "../components/ui/Navbar";
 import Footer from "../components/ui/Footer";
 import Script from "next/script";
+import "../app/lib/fontawesome";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,11 +42,6 @@ export default function RootLayout({
         <div className="sticky top-0 z-50 w-full">
           <Footer />
         </div>
-        <Script
-          src="https://kit.fontawesome.com/8cc2d7e0f6.js"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        ></Script>
       </body>
     </html>
   );
