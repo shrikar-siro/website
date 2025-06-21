@@ -1,6 +1,8 @@
 "use client";
 
-import Image from "next/image";
+import "../app/lib/fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
   Card,
   CardContent,
@@ -22,8 +24,6 @@ import { useEffect, useState } from "react";
 
 import { setupIntersectionAnimations } from "../app/animateIfInView";
 import { ContactForm } from "./contactForm";
-import Footer from "../components/ui/Footer";
-import { array } from "zod";
 import { motion } from "motion/react";
 
 type ExperienceItem = {
@@ -34,6 +34,13 @@ type ExperienceItem = {
   skillIconList: string[];
   link: string;
 };
+
+const externalLink = (
+  <FontAwesomeIcon
+    icon={["fas", "external-link"]}
+    className="w-5 h-5 text-md"
+  />
+);
 
 export default function Home() {
   // made the script runnable, so now we can use useEffect to call the setup function.
@@ -148,9 +155,6 @@ export default function Home() {
 
   const [expName, setExpName] = useState("ST Engineering IDirect");
   const arrowSymbol = "\u2197";
-  const centerX = 200,
-    centerY = 200;
-  const radius = 150;
   return (
     // add the navbar component here - or add it in the layout page.
     <>
@@ -310,12 +314,23 @@ export default function Home() {
                     className="md:basis-1/2 lg:basis-1/1 flex items-stretch"
                   >
                     <div className="flex flex-col justify-center border-2 border-opacity-60 rounded-md overflow-hidden">
-                      <a href={project.link} target="_blank">
-                        <img
-                          src={project.img}
-                          className="w-full h-[325px] object-cover object-center transform transition duration-150 hover:opacity-80"
-                        ></img>
-                      </a>
+                      <div className="relative inline-block w-full h-[325px]">
+                        <a href={project.link} target="_blank">
+                          <img
+                            src={project.img}
+                            className="w-full h-[325px] object-cover object-center transform transition duration-150 hover:opacity-80"
+                          ></img>
+                        </a>
+                        <a
+                          href={project.gitHubLink}
+                          className="md:hidden absolute top-2 right-2"
+                        >
+                          <div className="bg-black/40 rounded-md p-2 transform transition duration-200 hover:bg-black/60">
+                            {externalLink}
+                          </div>
+                        </a>
+                      </div>
+
                       <div className="lg:p-6 p-4 md:p-3 hidden md:block flex-grow text-center">
                         <h1 className="text-lg font-semibold mb-3 text-center CardDescription transform transition duration-200 hover:text-rose-500">
                           {project.name}{" "}
@@ -378,22 +393,25 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <div className="md:hidden grid grid-cols-1 gap-3 mx-auto mt-5 p-15">
-          {mySkills.map((item, index) => (
-            <div
-              key={index}
-              className="flex p-5 border-1 rounded-md transform transition duration-200 hover:border-blue-500 animate-infinite-scroll"
-            >
-              <div className="flex flex-row gap-3">
-                <div>
-                  <img className="w-12 h-12" src={item.icon} />
+        <div className="md:hidden h-[600px] overflow-hidden mt-25 p-15">
+          {/** made sure to keep a separate animation container, and a separate flex container - not mixing them both! */}
+          <div className="animate-infinite-scroll">
+            <div className="flex flex-col">
+              {[...mySkills, ...mySkills].map((item, index) => (
+                <div
+                  key={index}
+                  className="flex p-5 border rounded-md transition duration-200 hover:border-blue-500 mb-5"
+                >
+                  <div className="flex flex-row gap-3">
+                    <img className="w-12 h-12" src={item.icon} />
+                    <div className="flex items-center justify-center">
+                      <h3 className="text-md">{item.name}</h3>
+                    </div>
+                  </div>
                 </div>
-                <div className="flex items-center justify-center">
-                  <h3 className="text-md">{item.name}</h3>
-                </div>
-              </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </section>
 

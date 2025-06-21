@@ -258,5 +258,16 @@
   transform: translate(2px, -2px);
 }
 
+@keyframes scrolling {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
 .animate-infinite-scroll {
+  animation: scrolling 15s linear infinite;
+  will-change: transform;
 }

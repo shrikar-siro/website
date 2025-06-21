@@ -4,7 +4,6 @@ import "./globals.css";
 // imports for navbar component.
 import Navbar from "../components/ui/Navbar";
 import Footer from "../components/ui/Footer";
-import Script from "next/script";
 import "../app/lib/fontawesome";
 
 const geistSans = Geist({
