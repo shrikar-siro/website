@@ -89,6 +89,14 @@ export default function Home() {
       name: "Git",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-plain.svg",
     },
+    {
+      name: "SonarQube",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sonarqube/sonarqube-original.svg",
+    },
+    {
+      name: "Jenkins",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg",
+    },
   ];
 
   const myExperience: { [key: string]: ExperienceItem } = {
@@ -97,13 +105,15 @@ export default function Home() {
       role: "Incoming Software Engineering Intern",
       date: "May 2025 - Present",
       description: [
-        "• Currently working as a DevSecOps Software Engineering Intern at ST Engineering iDirect, exploring CI/CD pipeline development, infrastructure as code (IaC), containerization, and secure software delivery.",
+        "• Engineered an AWS Lambda function (Python) integrated with AWS Secrets Manager and GitLab to automatically rotate organizational impersonation tokens, significantly enhancing credential security.",
+        "• Integrated SonarQube and Jenkins with GitLab CI/CD to track developer credentials, automate secure AWS token retrieval and rotation, and strengthen organization-wide DevSecOps practices.",
+        "• Developed a web application for remote control of PDUs in the LabOps Engineering Lab and audited all lab hardware into SnipeIT, safeguarding critical equipment and saving the organization over $500,000.",
       ],
       skillIconList: [
-        mySkills[0].icon,
-        mySkills[1].icon,
-        mySkills[2].icon,
-        mySkills[3].icon,
+        mySkills[4].icon,
+        mySkills[8].icon,
+        mySkills[10].icon,
+        mySkills[11].icon,
       ],
       link: "https://www.idirect.net",
     },
@@ -124,9 +134,11 @@ export default function Home() {
       role: "CS 2130 Teaching Assistant",
       date: "Jan. 2025 - Present",
       description: [
-        "• Teaching Assistant for CS 2130 - Computer Systems & Organization I",
+        "• Led weekly lab sessions for 30+ students, reinforcing lecture material, guiding hands-on systems programming exercises, and conducting exam reviews.",
+        "• Graded assignments and exams for over 400 students, provided targeted feedback, and supported student learning through in-person labs and Piazza discussions.",
+        "• Collaborated with fellow TAs to design exams, selecting and refining questions to effectively assess student understanding of core computer systems topics.",
       ],
-      skillIconList: [mySkills[0].icon, mySkills[5].icon],
+      skillIconList: [mySkills[0].icon, mySkills[3].icon],
       link: "https://engineering.virginia.edu",
     },
   };
@@ -155,7 +167,7 @@ export default function Home() {
       img: "TopTunes.png",
       description:
         "I built a web application using React, TypeScript, and vanilla JavaScript integrating with the Spotify API to let users search for any artist and view their top 10 songs ranked by popularity. Each track includes detailed metadata—such as release date, collaborating artists, and popularity score.",
-      skills: [mySkills[2].icon, mySkills[4].icon],
+      skills: [mySkills[2].icon, mySkills[5].icon],
       link: "https://modify-njjv.vercel.app",
       gitHubLink: "https://github.com/shrikar-siro/Modify",
     },
