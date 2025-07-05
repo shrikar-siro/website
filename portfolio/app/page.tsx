@@ -7,7 +7,6 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -182,7 +181,7 @@ export default function Home() {
         <div className="text-6xl md:text-7xl lg:text-8xl font-semibold mt-50 text-center fade-in py-30">
           <div className="text-container">
             <p className="text-to-animate bg-gradient-to-r from-blue-500 to-white text-transparent bg-clip-text inline-block animate">
-              Hey. I'm Shrikar.
+              Hey. I&apos;m Shrikar.
             </p>
           </div>
         </div>
@@ -208,12 +207,12 @@ export default function Home() {
               </p>
             </div>
             <p className="fade-in text-xl md:text-2xl text-center mt-5">
-              I'm currently a 3rd year CS major at the University of Virginia
-              (UVA) and a Software Engineering Intern at ST Engineering IDirect.
-              When I'm not coding, you can find me watching sports, reading tech
-              articles, or hitting serves at the local tennis court. I'm always
-              looking for opportunities to learn new technologies, build cool
-              projects, and grow with others.
+              I&apos;m currently a 3rd year CS major at the University of
+              Virginia (UVA) and a Software Engineering Intern at ST Engineering
+              IDirect. When I&apos;m not coding, you can find me watching
+              sports, reading tech articles, or hitting serves at the local
+              tennis court. I&apos;m always looking for opportunities to learn
+              new technologies, build cool projects, and grow with others.
             </p>
           </div>
         </div>
@@ -315,8 +314,9 @@ export default function Home() {
             </p>
             <p className="fade-in text-center text-xl">
               Here are some of my projects. Click on the project image to view
-              the deployed project and the card title arrow (or the card's top
-              right arrow on smaller screens) to view the source code. Enjoy!
+              the deployed project and the card title arrow (or the card&apos;s
+              top right arrow on smaller screens) to view the source code.
+              Enjoy!
             </p>
           </div>
           <div className="mt-5 md:mt-5 p-10 sm:p-5 md:p-0 max-w-5xl lg:basis-7xl">
@@ -445,7 +445,7 @@ export default function Home() {
           <div className="flex-grow max-w-3xl text-4xl fade-in text-center font-bold mb-5 sm:mb-5">
             Contact Me
             <p className="text-xl mt-5 font-normal">
-              Like what you see? Let's talk!
+              Like what you see? Let&apos;s talk!
             </p>
           </div>
           <div className="w-full lg:max-w-2xl mx-auto justify-center items-center md:p-0">

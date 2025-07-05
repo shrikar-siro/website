@@ -1,10 +1,8 @@
-import backgroundImage from "../../app/public/profile.jpeg";
 import "../../app/navbar.css";
 import { Menu } from "lucide-react";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -12,7 +10,6 @@ import {
 import { Button } from "@/components/ui/button";
 
 export default function Navbar() {
-  const navLinks = {};
   return (
     <>
       <div id="overlay"></div>
