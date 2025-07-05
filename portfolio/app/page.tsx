@@ -178,7 +178,7 @@ export default function Home() {
   return (
     // add the navbar component here - or add it in the layout page.
     <>
-      <section id="first" className="">
+      <section id="first">
         <div className="text-6xl md:text-7xl lg:text-8xl font-semibold mt-50 text-center fade-in py-30">
           <div className="text-container">
             <p className="text-to-animate bg-gradient-to-r from-blue-500 to-white text-transparent bg-clip-text inline-block animate">
@@ -314,9 +314,9 @@ export default function Home() {
               Projects
             </p>
             <p className="fade-in text-center text-xl">
-              Here are some of my projects. You can either click on the image to
-              visit the deployed project, or the card title's floating arrow to
-              view the source code. Feel free to play around, and enjoy!
+              Here are some of my projects. Click on the project image to view
+              the deployed project and the card title arrow (or the card's top
+              right arrow on smaller screens) to view the source code. Enjoy!
             </p>
           </div>
           <div className="mt-5 md:mt-5 p-10 sm:p-5 md:p-0 max-w-5xl lg:basis-7xl">
@@ -343,6 +343,7 @@ export default function Home() {
                         </a>
                         <a
                           href={project.gitHubLink}
+                          target="_blank"
                           className="md:hidden absolute top-2 right-2"
                         >
                           <div className="bg-black/40 rounded-md p-2 transform transition duration-200 hover:bg-black/60">
