@@ -101,7 +101,7 @@ export default function Home() {
   const myExperience: { [key: string]: ExperienceItem } = {
     "ST Engineering IDirect": {
       icons: "stLogo.jpg",
-      role: "Incoming Software Engineering Intern",
+      role: "Software Engineering Intern",
       date: "May 2025 - Present",
       description: [
         "• Engineered an AWS Lambda function (Python) integrated with AWS Secrets Manager and GitLab to automatically rotate organizational impersonation tokens, significantly enhancing credential security.",
