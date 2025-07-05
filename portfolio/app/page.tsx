@@ -178,7 +178,7 @@ export default function Home() {
   return (
     // add the navbar component here - or add it in the layout page.
     <>
-      <section id="first">
+      <section id="first" className="">
         <div className="text-6xl md:text-7xl lg:text-8xl font-semibold mt-50 text-center fade-in py-30">
           <div className="text-container">
             <p className="text-to-animate bg-gradient-to-r from-blue-500 to-white text-transparent bg-clip-text inline-block animate">
@@ -190,7 +190,7 @@ export default function Home() {
 
       <section
         id="about"
-        className="py-30 mb-30 place-content-center -scroll-mt-15"
+        className="py-30 mb-30 place-content-center scroll-mt-30 fadeIn animate"
       >
         {/** have a big div as the container div, and 2 children divs. */}
         <div className="lg:flex lg:gap-20 items-start p-15 md:p-10 sm:p-5 mx-auto">
@@ -306,7 +306,7 @@ export default function Home() {
 
       <section
         id="projects"
-        className="mt-35 py-30 flex items-center justify-center md:pt-15 p-10 fadeIn animate scroll-mt-15 md:scroll-mt-20"
+        className="mt-35 py-40 flex items-center justify-center md:pt-15 p-10 fadeIn animate scroll-mt-15 md:scroll-mt-20"
       >
         <div className="flex flex-col lg:flex-row items-center justify-center lg:gap-30 w-full">
           <div className="flex flex-col max-w-2xl lg:basis-3xl">
